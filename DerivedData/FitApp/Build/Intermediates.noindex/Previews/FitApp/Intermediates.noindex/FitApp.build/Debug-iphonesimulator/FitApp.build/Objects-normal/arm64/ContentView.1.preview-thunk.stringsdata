@@ -4,7 +4,23 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Hello, world!"
+        "key": "Fit App"
+      },
+      {
+        "comment": "",
+        "key": "Workout Planning"
+      },
+      {
+        "comment": "",
+        "key": "What body part would you like to focus on?"
+      },
+      {
+        "comment": "",
+        "key": "Next"
+      },
+      {
+        "comment": "",
+        "key": "How many days a week can you workout (At least 45 minutes)?"
       }
     ]
   },

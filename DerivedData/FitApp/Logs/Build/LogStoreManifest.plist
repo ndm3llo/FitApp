@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>46EAF7E9-6428-464F-98D3-7CA76152417C</key>
+		<key>1F412B07-1C72-4E2D-99B4-60E84716F636</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>46EAF7E9-6428-464F-98D3-7CA76152417C.xcactivitylog</string>
+			<string>1F412B07-1C72-4E2D-99B4-60E84716F636.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,13 +32,47 @@
 			<key>signature</key>
 			<string>Build for Previews FitApp</string>
 			<key>timeStartedRecording</key>
-			<real>737476347.05579603</real>
+			<real>737492688.40913701</real>
 			<key>timeStoppedRecording</key>
-			<real>737476352.92506802</real>
+			<real>737492689.61760104</real>
 			<key>title</key>
 			<string>Build for Previews FitApp</string>
 			<key>uniqueIdentifier</key>
-			<string>46EAF7E9-6428-464F-98D3-7CA76152417C</string>
+			<string>1F412B07-1C72-4E2D-99B4-60E84716F636</string>
+		</dict>
+		<key>26EEDBA1-667F-45FB-91B9-BC3323A44FF6</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>26EEDBA1-667F-45FB-91B9-BC3323A44FF6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737497577.71515298</real>
+			<key>timeStoppedRecording</key>
+			<real>737497580.16226399</real>
+			<key>title</key>
+			<string>Build FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>26EEDBA1-667F-45FB-91B9-BC3323A44FF6</string>
 		</dict>
 	</dict>
 </dict>

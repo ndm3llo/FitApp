@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AEAE1189CC30D45B0CFE0806ACD47E475E3C6ADC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AEAE1189CC30D45B0CFE0806ACD47E475E3C6ADC" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "319FC355-1B9D-4DF4-B0E2-2E9E2B6FB9D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AEAE1189CC30D45B0CFE0806ACD47E475E3C6ADC" : "FitApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FitApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FitApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git@github.com:ndm3llo\/FitApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AEAE1189CC30D45B0CFE0806ACD47E475E3C6ADC"
+    }
+  ]
+}

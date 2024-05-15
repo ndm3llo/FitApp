@@ -11,7 +11,7 @@ import SwiftUI
 struct FitAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FirstPage()
         }
     }
 }

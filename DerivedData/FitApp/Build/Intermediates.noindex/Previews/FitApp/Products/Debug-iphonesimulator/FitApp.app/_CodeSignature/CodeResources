@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		FruiwuNVAgYHQuL1S61ce2SmDC8=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		AEsQkQQFN0lae4F/axEf8ISuYmA=
@@ -14,7 +18,15 @@
 		</data>
 	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9XzmzaDZLAZHYHz0ZPgWuLpBucrrsfbMsEk4spoTSXM=
+			</data>
+		</dict>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>
