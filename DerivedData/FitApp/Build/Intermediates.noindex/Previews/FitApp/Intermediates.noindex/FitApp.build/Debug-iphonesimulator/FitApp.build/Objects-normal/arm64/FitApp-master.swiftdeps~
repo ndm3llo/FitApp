@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "ea5b23ffc04465831186dcf4fe301299738f59c3eed08c8f2962aa6e4105e56c"
+build_start_time: [1715783549, 161861000]
+build_end_time: [1715783549, 244918000]
+inputs:
+  "/Users/nicolas/app/FitApp/FitApp/ContentView.swift": !private [1715783544, 201543046]
+  "/Users/nicolas/app/FitApp/FitApp/FitAppApp.swift": !private [1715783544, 199262239]
