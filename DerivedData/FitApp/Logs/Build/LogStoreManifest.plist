@@ -6,6 +6,108 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>06AD04C9-6B4B-4393-9B05-73A4FE6130E1</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>06AD04C9-6B4B-4393-9B05-73A4FE6130E1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737649464.96305096</real>
+			<key>timeStoppedRecording</key>
+			<real>737649466.43032002</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>06AD04C9-6B4B-4393-9B05-73A4FE6130E1</string>
+		</dict>
+		<key>12902300-6199-4AAF-B350-7A26BCF7D016</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>12902300-6199-4AAF-B350-7A26BCF7D016.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737500628.20300102</real>
+			<key>timeStoppedRecording</key>
+			<real>737500628.73679495</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>12902300-6199-4AAF-B350-7A26BCF7D016</string>
+		</dict>
+		<key>1AD89749-281B-43A6-9102-ADB7DF8B07ED</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1AD89749-281B-43A6-9102-ADB7DF8B07ED.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737499568.70955706</real>
+			<key>timeStoppedRecording</key>
+			<real>737499570.20626199</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>1AD89749-281B-43A6-9102-ADB7DF8B07ED</string>
+		</dict>
 		<key>1F412B07-1C72-4E2D-99B4-60E84716F636</key>
 		<dict>
 			<key>className</key>
@@ -40,6 +142,40 @@
 			<key>uniqueIdentifier</key>
 			<string>1F412B07-1C72-4E2D-99B4-60E84716F636</string>
 		</dict>
+		<key>20913C94-764E-4ADB-A75F-37E4F9BCCF83</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>20913C94-764E-4ADB-A75F-37E4F9BCCF83.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737564282.949543</real>
+			<key>timeStoppedRecording</key>
+			<real>737564287.76728594</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>20913C94-764E-4ADB-A75F-37E4F9BCCF83</string>
+		</dict>
 		<key>26EEDBA1-667F-45FB-91B9-BC3323A44FF6</key>
 		<dict>
 			<key>className</key>
@@ -73,6 +209,1366 @@
 			<string>Build FitApp</string>
 			<key>uniqueIdentifier</key>
 			<string>26EEDBA1-667F-45FB-91B9-BC3323A44FF6</string>
+		</dict>
+		<key>2A4748E1-6874-43C8-82DE-B2CD74632B62</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2A4748E1-6874-43C8-82DE-B2CD74632B62.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737500616.73536098</real>
+			<key>timeStoppedRecording</key>
+			<real>737500617.593876</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>2A4748E1-6874-43C8-82DE-B2CD74632B62</string>
+		</dict>
+		<key>2C10587C-8A56-4748-B206-ED7BFF60AC4A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2C10587C-8A56-4748-B206-ED7BFF60AC4A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737499024.82582402</real>
+			<key>timeStoppedRecording</key>
+			<real>737499025.34288704</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>2C10587C-8A56-4748-B206-ED7BFF60AC4A</string>
+		</dict>
+		<key>3B4E5683-B257-4421-8608-41B4EA7EFF5C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3B4E5683-B257-4421-8608-41B4EA7EFF5C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737649453.92931199</real>
+			<key>timeStoppedRecording</key>
+			<real>737649454.99997401</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>3B4E5683-B257-4421-8608-41B4EA7EFF5C</string>
+		</dict>
+		<key>3F30956F-6342-4EA1-B1DE-DA66054C2A0B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3F30956F-6342-4EA1-B1DE-DA66054C2A0B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737505133.680516</real>
+			<key>timeStoppedRecording</key>
+			<real>737505140.28934395</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>3F30956F-6342-4EA1-B1DE-DA66054C2A0B</string>
+		</dict>
+		<key>48ABCE98-99D9-45AF-ACAA-4F6E9AC09404</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>48ABCE98-99D9-45AF-ACAA-4F6E9AC09404.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737498027.39258599</real>
+			<key>timeStoppedRecording</key>
+			<real>737498028.73392606</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>48ABCE98-99D9-45AF-ACAA-4F6E9AC09404</string>
+		</dict>
+		<key>4F5A3502-D564-451D-AAF9-FA8E8F99477A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4F5A3502-D564-451D-AAF9-FA8E8F99477A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737509306.145329</real>
+			<key>timeStoppedRecording</key>
+			<real>737509311.57308102</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>4F5A3502-D564-451D-AAF9-FA8E8F99477A</string>
+		</dict>
+		<key>53982758-5596-46FB-9323-F4B791136E4C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>53982758-5596-46FB-9323-F4B791136E4C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737500499.43172503</real>
+			<key>timeStoppedRecording</key>
+			<real>737500500.14858699</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>53982758-5596-46FB-9323-F4B791136E4C</string>
+		</dict>
+		<key>58D65BB4-FF63-44E7-99F3-F36CA6D270E0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>58D65BB4-FF63-44E7-99F3-F36CA6D270E0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737500632.01774395</real>
+			<key>timeStoppedRecording</key>
+			<real>737500632.39812505</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>58D65BB4-FF63-44E7-99F3-F36CA6D270E0</string>
+		</dict>
+		<key>5E0FC2D0-8FA2-4B29-AEA0-8B8DF8DF6446</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>5E0FC2D0-8FA2-4B29-AEA0-8B8DF8DF6446.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737649433.56363904</real>
+			<key>timeStoppedRecording</key>
+			<real>737649434.91981697</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>5E0FC2D0-8FA2-4B29-AEA0-8B8DF8DF6446</string>
+		</dict>
+		<key>6A0257CB-B8E8-4828-BF49-0906D1426983</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6A0257CB-B8E8-4828-BF49-0906D1426983.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737500656.23124897</real>
+			<key>timeStoppedRecording</key>
+			<real>737500656.99320102</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>6A0257CB-B8E8-4828-BF49-0906D1426983</string>
+		</dict>
+		<key>6DC37EC2-CE6E-4A4E-AC2A-B3E339C745AA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6DC37EC2-CE6E-4A4E-AC2A-B3E339C745AA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737500637.65402901</real>
+			<key>timeStoppedRecording</key>
+			<real>737500638.08779204</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>6DC37EC2-CE6E-4A4E-AC2A-B3E339C745AA</string>
+		</dict>
+		<key>7167888A-DBCD-4D0A-89ED-3235BC96A567</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7167888A-DBCD-4D0A-89ED-3235BC96A567.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737564302.87080503</real>
+			<key>timeStoppedRecording</key>
+			<real>737564303.99272096</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>7167888A-DBCD-4D0A-89ED-3235BC96A567</string>
+		</dict>
+		<key>82D1182F-2ABD-4E93-9F0F-F9D8B55795FD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>82D1182F-2ABD-4E93-9F0F-F9D8B55795FD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737564309.02002203</real>
+			<key>timeStoppedRecording</key>
+			<real>737564310.47727501</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>82D1182F-2ABD-4E93-9F0F-F9D8B55795FD</string>
+		</dict>
+		<key>8478B95A-31A3-4446-83A3-177DDF80D8FA</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8478B95A-31A3-4446-83A3-177DDF80D8FA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737505144.11993206</real>
+			<key>timeStoppedRecording</key>
+			<real>737505144.99928796</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>8478B95A-31A3-4446-83A3-177DDF80D8FA</string>
+		</dict>
+		<key>84AF00A7-18B7-4307-96A1-B037ADAE38C2</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>84AF00A7-18B7-4307-96A1-B037ADAE38C2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737500624.90814805</real>
+			<key>timeStoppedRecording</key>
+			<real>737500625.38162994</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>84AF00A7-18B7-4307-96A1-B037ADAE38C2</string>
+		</dict>
+		<key>9683605A-1A16-485B-AE67-BBFDE1CE4E40</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9683605A-1A16-485B-AE67-BBFDE1CE4E40.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737503687.01842999</real>
+			<key>timeStoppedRecording</key>
+			<real>737503691.71547496</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>9683605A-1A16-485B-AE67-BBFDE1CE4E40</string>
+		</dict>
+		<key>97FF66D5-3106-4429-801D-7698D681550F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>97FF66D5-3106-4429-801D-7698D681550F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737648718.83634603</real>
+			<key>timeStoppedRecording</key>
+			<real>737648719.969818</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>97FF66D5-3106-4429-801D-7698D681550F</string>
+		</dict>
+		<key>988D2907-6868-4D95-80F6-59A9E5CBE192</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>988D2907-6868-4D95-80F6-59A9E5CBE192.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737503893.275594</real>
+			<key>timeStoppedRecording</key>
+			<real>737503896.35873604</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>988D2907-6868-4D95-80F6-59A9E5CBE192</string>
+		</dict>
+		<key>99ABADC7-614F-4D49-88C8-070395A1B750</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>99ABADC7-614F-4D49-88C8-070395A1B750.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737499040.56253695</real>
+			<key>timeStoppedRecording</key>
+			<real>737499041.16077805</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>99ABADC7-614F-4D49-88C8-070395A1B750</string>
+		</dict>
+		<key>9B821F42-AA94-4145-A24C-49CD3AD4DB3D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9B821F42-AA94-4145-A24C-49CD3AD4DB3D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737498163.89855897</real>
+			<key>timeStoppedRecording</key>
+			<real>737498167.12625396</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>9B821F42-AA94-4145-A24C-49CD3AD4DB3D</string>
+		</dict>
+		<key>9C540632-3A7E-43DF-A340-F17D7CF2E758</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9C540632-3A7E-43DF-A340-F17D7CF2E758.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737649467.63931203</real>
+			<key>timeStoppedRecording</key>
+			<real>737649467.67263198</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>9C540632-3A7E-43DF-A340-F17D7CF2E758</string>
+		</dict>
+		<key>9F3B69F5-1A18-460B-B30A-04F746482637</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9F3B69F5-1A18-460B-B30A-04F746482637.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737498975.55448306</real>
+			<key>timeStoppedRecording</key>
+			<real>737498976.14677894</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>9F3B69F5-1A18-460B-B30A-04F746482637</string>
+		</dict>
+		<key>9F7EE5B6-476B-4614-A4C6-1E6A531BBE39</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9F7EE5B6-476B-4614-A4C6-1E6A531BBE39.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737499018.31409097</real>
+			<key>timeStoppedRecording</key>
+			<real>737499019.09902501</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>9F7EE5B6-476B-4614-A4C6-1E6A531BBE39</string>
+		</dict>
+		<key>A0FE9392-18E0-481C-8255-E447A6D6259A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A0FE9392-18E0-481C-8255-E447A6D6259A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737505473.53291702</real>
+			<key>timeStoppedRecording</key>
+			<real>737505475.30204701</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>A0FE9392-18E0-481C-8255-E447A6D6259A</string>
+		</dict>
+		<key>A38B7403-B2C8-49D8-A79B-B9F824CA82A7</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A38B7403-B2C8-49D8-A79B-B9F824CA82A7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737499045.49513495</real>
+			<key>timeStoppedRecording</key>
+			<real>737499046.53569102</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>A38B7403-B2C8-49D8-A79B-B9F824CA82A7</string>
+		</dict>
+		<key>A9EEEA9B-5D70-4751-8798-4F5EB1E1D924</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A9EEEA9B-5D70-4751-8798-4F5EB1E1D924.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737649115.08571601</real>
+			<key>timeStoppedRecording</key>
+			<real>737649116.11454105</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>A9EEEA9B-5D70-4751-8798-4F5EB1E1D924</string>
+		</dict>
+		<key>AB8D5BE7-AC84-48A7-8A29-2E1A520A9A4D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AB8D5BE7-AC84-48A7-8A29-2E1A520A9A4D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737505302.35205603</real>
+			<key>timeStoppedRecording</key>
+			<real>737505308.28897905</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>AB8D5BE7-AC84-48A7-8A29-2E1A520A9A4D</string>
+		</dict>
+		<key>B0B5D64E-7D91-4659-8824-231AF2936E54</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B0B5D64E-7D91-4659-8824-231AF2936E54.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737500496.70439506</real>
+			<key>timeStoppedRecording</key>
+			<real>737500497.72582996</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>B0B5D64E-7D91-4659-8824-231AF2936E54</string>
+		</dict>
+		<key>C570FEAA-70B9-430C-8A26-54AA0E21F17F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C570FEAA-70B9-430C-8A26-54AA0E21F17F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737566755.44277406</real>
+			<key>timeStoppedRecording</key>
+			<real>737566757.37516904</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>C570FEAA-70B9-430C-8A26-54AA0E21F17F</string>
+		</dict>
+		<key>CDDBA6B8-797D-434E-8E32-280C506BBB73</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CDDBA6B8-797D-434E-8E32-280C506BBB73.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737499065.52584505</real>
+			<key>timeStoppedRecording</key>
+			<real>737499066.12121296</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>CDDBA6B8-797D-434E-8E32-280C506BBB73</string>
+		</dict>
+		<key>D648C82F-3CAB-423C-84D9-EE5742866675</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D648C82F-3CAB-423C-84D9-EE5742866675.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737504363.55204797</real>
+			<key>timeStoppedRecording</key>
+			<real>737504369.52083194</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>D648C82F-3CAB-423C-84D9-EE5742866675</string>
+		</dict>
+		<key>DEDC371C-DD82-49D5-AFA8-1B8F2717F937</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DEDC371C-DD82-49D5-AFA8-1B8F2717F937.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737499028.60168898</real>
+			<key>timeStoppedRecording</key>
+			<real>737499028.97658098</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>DEDC371C-DD82-49D5-AFA8-1B8F2717F937</string>
+		</dict>
+		<key>E3012141-6311-40B4-9577-E6FDBAEAEB99</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E3012141-6311-40B4-9577-E6FDBAEAEB99.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737498521.98257804</real>
+			<key>timeStoppedRecording</key>
+			<real>737498523.31881499</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>E3012141-6311-40B4-9577-E6FDBAEAEB99</string>
+		</dict>
+		<key>E626BE06-2CD6-472B-A532-2E862BD3F9DC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E626BE06-2CD6-472B-A532-2E862BD3F9DC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737500681.088956</real>
+			<key>timeStoppedRecording</key>
+			<real>737500682.51620996</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>E626BE06-2CD6-472B-A532-2E862BD3F9DC</string>
+		</dict>
+		<key>E6350009-9033-4601-918D-A693212CBFC5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E6350009-9033-4601-918D-A693212CBFC5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737500503.96200001</real>
+			<key>timeStoppedRecording</key>
+			<real>737500504.91224897</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>E6350009-9033-4601-918D-A693212CBFC5</string>
+		</dict>
+		<key>E7EB3EAF-47DC-41A5-9264-A04C2B93CC34</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E7EB3EAF-47DC-41A5-9264-A04C2B93CC34.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737499061.79757094</real>
+			<key>timeStoppedRecording</key>
+			<real>737499062.74151897</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>E7EB3EAF-47DC-41A5-9264-A04C2B93CC34</string>
+		</dict>
+		<key>EAE490E7-7D4B-42A4-A721-6B79CAD3504D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EAE490E7-7D4B-42A4-A721-6B79CAD3504D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737565816.62979102</real>
+			<key>timeStoppedRecording</key>
+			<real>737565818.33719897</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>EAE490E7-7D4B-42A4-A721-6B79CAD3504D</string>
+		</dict>
+		<key>EC8085D8-B20D-4586-9D72-E3F814336174</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EC8085D8-B20D-4586-9D72-E3F814336174.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737498308.90809798</real>
+			<key>timeStoppedRecording</key>
+			<real>737498312.48425496</real>
+			<key>title</key>
+			<string>Build FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>EC8085D8-B20D-4586-9D72-E3F814336174</string>
+		</dict>
+		<key>F9D79299-A293-48E4-AA9F-D56EEA361E73</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F9D79299-A293-48E4-AA9F-D56EEA361E73.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737500493.88029802</real>
+			<key>timeStoppedRecording</key>
+			<real>737500495.46841204</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>F9D79299-A293-48E4-AA9F-D56EEA361E73</string>
+		</dict>
+		<key>FA098E7F-7CF6-4D3A-AD83-1E0A9235E334</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FA098E7F-7CF6-4D3A-AD83-1E0A9235E334.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FitApp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FitApp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build for Previews FitApp</string>
+			<key>timeStartedRecording</key>
+			<real>737499553.863222</real>
+			<key>timeStoppedRecording</key>
+			<real>737499554.92835605</real>
+			<key>title</key>
+			<string>Build for Previews FitApp</string>
+			<key>uniqueIdentifier</key>
+			<string>FA098E7F-7CF6-4D3A-AD83-1E0A9235E334</string>
 		</dict>
 	</dict>
 </dict>

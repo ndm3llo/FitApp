@@ -4,7 +4,31 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Fit App"
+        "key": "Exercise: %@"
+      },
+      {
+        "comment": "",
+        "key": "Workout"
+      },
+      {
+        "comment": "",
+        "key": "Plan"
+      },
+      {
+        "comment": "",
+        "key": "Error: Missing Days or Emphasis"
+      },
+      {
+        "comment": "",
+        "key": "Selected Days: %@"
+      },
+      {
+        "comment": "",
+        "key": "Selected Emphasis: %@"
+      },
+      {
+        "comment": "",
+        "key": "Get"
       },
       {
         "comment": "",
@@ -21,6 +45,14 @@
       {
         "comment": "",
         "key": "How many days a week can you workout (At least 45 minutes)?"
+      },
+      {
+        "comment": "",
+        "key": "Back"
+      },
+      {
+        "comment": "",
+        "key": "Warrior"
       }
     ]
   },

@@ -1,8 +1,8 @@
 version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
 options: "c38be00303f4743f9cd870bdd54daa03ba7369ff24228712ae59847a84827942"
-build_start_time: [1715804779, 257888000]
-build_end_time: [1715804780, 159376000]
+build_start_time: [1715805511, 445936000]
+build_end_time: [1715805512, 480570000]
 inputs:
-  "/Users/nicolas/app/FitApp/FitApp/ContentView.swift": [1715804760, 441603640]
+  "/Users/nicolas/app/FitApp/FitApp/ContentView.swift": [1715805508, 807063170]
   "/Users/nicolas/app/FitApp/FitApp/Dropdown.swift": [1715798511, 206461479]
   "/Users/nicolas/app/FitApp/FitApp/FitAppApp.swift": [1715784738, 620024252]

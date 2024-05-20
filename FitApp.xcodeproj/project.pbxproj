@@ -12,6 +12,7 @@
 		3725883B2BF4FEFA00661C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3725883A2BF4FEFA00661C24 /* Assets.xcassets */; };
 		3725883E2BF4FEFA00661C24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3725883D2BF4FEFA00661C24 /* Preview Assets.xcassets */; };
 		372588452BF5395700661C24 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372588442BF5395700661C24 /* Dropdown.swift */; };
+		372588472BF6601E00661C24 /* Excercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372588462BF6601E00661C24 /* Excercises.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		3725883A2BF4FEFA00661C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3725883D2BF4FEFA00661C24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		372588442BF5395700661C24 /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		372588462BF6601E00661C24 /* Excercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excercises.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				372588362BF4FEF800661C24 /* FitAppApp.swift */,
 				372588382BF4FEF800661C24 /* ContentView.swift */,
 				372588442BF5395700661C24 /* Dropdown.swift */,
+				372588462BF6601E00661C24 /* Excercises.swift */,
 				3725883A2BF4FEFA00661C24 /* Assets.xcassets */,
 				3725883C2BF4FEFA00661C24 /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				372588392BF4FEF800661C24 /* ContentView.swift in Sources */,
+				372588472BF6601E00661C24 /* Excercises.swift in Sources */,
 				372588452BF5395700661C24 /* Dropdown.swift in Sources */,
 				372588372BF4FEF800661C24 /* FitAppApp.swift in Sources */,
 			);
