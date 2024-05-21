@@ -1,0 +1,20 @@
+{
+  "source": "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Day 2"
+      },
+      {
+        "comment": "",
+        "key": "Plan"
+      },
+      {
+        "comment": "",
+        "key": "Day 1"
+      }
+    ]
+  },
+  "version": 1
+}

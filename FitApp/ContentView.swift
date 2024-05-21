@@ -288,31 +288,8 @@ struct Plan: View {
     @Binding var selectedEmphasis: String?
     var body: some View {
         VStack {
-            HStack {
-                Text("Workout")
-                    .font(.system(size: 35))
-                    .bold()
-                    .foregroundColor(Color.gray.opacity(0.9))
-                    .kerning(2) // Adjust letter spacing
-                    .shadow(color: Color.gray.opacity(0.9), radius: 3, x: 3, y: 8) // Add a shadow effect
-                Text("Plan")
-                    .font(.system(size: 35))
-                    .bold()
-                    .foregroundColor(.gray)
-                    .kerning(2) // Adjust letter spacing
-                    .shadow(color: .gray, radius: 3, x: 3, y: 8)
-            }
             if selectedDays == "Two" {
-                if selectedEmphasis == "Shoulders" {
-                    let upperChest = UpperChest()
-                                        
-                                        // Get a random exercise
-                    if let randomExercise = upperChest.getRandomExercise() {
-                        Text("Exercise: \(randomExercise.name)")
-                            .font(.system(size: 18))
-                            .padding()
-                    }
-                }
+                TwoDay(selectedEmphasis: selectedEmphasis)
             }
             else {
                 Text("Workout")
@@ -323,6 +300,7 @@ struct Plan: View {
         }
     }
 }
+
 
 
 struct ContentView_Previews: PreviewProvider {

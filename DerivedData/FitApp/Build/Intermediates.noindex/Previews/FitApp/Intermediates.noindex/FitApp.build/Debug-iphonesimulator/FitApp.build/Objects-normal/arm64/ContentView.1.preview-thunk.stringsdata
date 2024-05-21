@@ -4,15 +4,7 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Exercise: %@"
-      },
-      {
-        "comment": "",
         "key": "Workout"
-      },
-      {
-        "comment": "",
-        "key": "Plan"
       },
       {
         "comment": "",
@@ -29,6 +21,10 @@
       {
         "comment": "",
         "key": "Get"
+      },
+      {
+        "comment": "",
+        "key": "Plan"
       },
       {
         "comment": "",

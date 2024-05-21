@@ -4,7 +4,15 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Fit App"
+        "key": "Workout"
+      },
+      {
+        "comment": "",
+        "key": "Warrior"
+      },
+      {
+        "comment": "",
+        "key": "Back"
       },
       {
         "comment": "",
@@ -21,6 +29,26 @@
       {
         "comment": "",
         "key": "What body part would you like to focus on?"
+      },
+      {
+        "comment": "",
+        "key": "Error: Missing Days or Emphasis"
+      },
+      {
+        "comment": "",
+        "key": "Selected Days: %@"
+      },
+      {
+        "comment": "",
+        "key": "Selected Emphasis: %@"
+      },
+      {
+        "comment": "",
+        "key": "Get"
+      },
+      {
+        "comment": "",
+        "key": "Plan"
       }
     ]
   },

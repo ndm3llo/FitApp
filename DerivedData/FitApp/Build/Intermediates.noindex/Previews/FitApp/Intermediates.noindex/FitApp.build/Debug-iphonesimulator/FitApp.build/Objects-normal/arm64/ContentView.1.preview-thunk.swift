@@ -4,7 +4,7 @@ import SwiftUI
 
 extension ContentView_Previews {
     @_dynamicReplacement(for: previews) private static var __preview__previews: some View {
-        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/ContentView.swift", line: 330)
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/ContentView.swift", line: 308)
         FirstPage()
     
 #sourceLocation()
@@ -15,37 +15,14 @@ extension Plan {
     @_dynamicReplacement(for: body) private var __preview__body: some View {
         #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/ContentView.swift", line: 290)
         VStack {
-            HStack {
-                Text(__designTimeString("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value", fallback: "Workout"))
-                    .font(.system(size: __designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 35)))
-                    .bold()
-                    .foregroundColor(Color.gray.opacity(__designTimeFloat("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.9)))
-                    .kerning(__designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].modifier[3].arg[0].value", fallback: 2)) // Adjust letter spacing
-                    .shadow(color: Color.gray.opacity(__designTimeFloat("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].modifier[4].arg[0].value.modifier[0].arg[0].value", fallback: 0.9)), radius: __designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].modifier[4].arg[1].value", fallback: 3), x: __designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].modifier[4].arg[2].value", fallback: 3), y: __designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[0].modifier[4].arg[3].value", fallback: 8)) // Add a shadow effect
-                Text(__designTimeString("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[1].arg[0].value", fallback: "Plan"))
-                    .font(.system(size: __designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[1].modifier[0].arg[0].value.arg[0].value", fallback: 35)))
-                    .bold()
-                    .foregroundColor(.gray)
-                    .kerning(__designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[1].modifier[3].arg[0].value", fallback: 2)) // Adjust letter spacing
-                    .shadow(color: .gray, radius: __designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[1].modifier[4].arg[1].value", fallback: 3), x: __designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[1].modifier[4].arg[2].value", fallback: 3), y: __designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[0].arg[0].value.[1].modifier[4].arg[3].value", fallback: 8))
-            }
             if selectedDays == "Two" {
-                if selectedEmphasis == "Shoulders" {
-                    let upperChest = UpperChest()
-                                        
-                                        // Get a random exercise
-                    if let randomExercise = upperChest.getRandomExercise() {
-                        Text("Exercise: \(randomExercise.name)")
-                            .font(.system(size: __designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[1].[0].[0].[0].[1].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 18)))
-                            .padding()
-                    }
-                }
+                TwoDay(selectedEmphasis: selectedEmphasis)
             }
             else {
-                Text(__designTimeString("#5182.[8].[2].property.[0].[0].arg[0].value.[1].[1].[0].arg[0].value", fallback: "Workout"))
-                    .font(.system(size: __designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[1].[1].[0].modifier[0].arg[0].value.arg[0].value", fallback: 35)))
+                Text(__designTimeString("#5182.[8].[2].property.[0].[0].arg[0].value.[0].[1].[0].arg[0].value", fallback: "Workout"))
+                    .font(.system(size: __designTimeInteger("#5182.[8].[2].property.[0].[0].arg[0].value.[0].[1].[0].modifier[0].arg[0].value.arg[0].value", fallback: 35)))
                     .bold()
-                    .foregroundColor(Color.gray.opacity(__designTimeFloat("#5182.[8].[2].property.[0].[0].arg[0].value.[1].[1].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.9)))
+                    .foregroundColor(Color.gray.opacity(__designTimeFloat("#5182.[8].[2].property.[0].[0].arg[0].value.[0].[1].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.9)))
             }
         }
     

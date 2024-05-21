@@ -1,0 +1,20 @@
+{
+  "source": "/Users/nicolas/app/FitApp/DerivedData/FitApp/Build/Intermediates.noindex/Previews/FitApp/Intermediates.noindex/FitApp.build/Debug-iphonesimulator/FitApp.build/Objects-normal/arm64/TwoDay.1.preview-thunk.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Day 2"
+      },
+      {
+        "comment": "",
+        "key": "Plan"
+      },
+      {
+        "comment": "",
+        "key": "Day 1"
+      }
+    ]
+  },
+  "version": 1
+}
