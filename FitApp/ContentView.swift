@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FirstPage: View {
+    @StateObject private var exerciseModel = ExerciseModel()
     var body: some View {
         NavigationView {
             VStack {
@@ -45,7 +46,7 @@ struct FirstPage: View {
                 }
                 VStack {
                     ZStack {
-                        NavigationLink(destination: WorkoutPlanning()) {
+                        NavigationLink(destination: WorkoutPlanning(exerciseModel: exerciseModel)) {
                             Image("dumbell2")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
@@ -54,7 +55,7 @@ struct FirstPage: View {
                     }
                     .padding(.leading, -160)
                     ZStack {
-                        NavigationLink(destination: Nutrition()) {
+                        NavigationLink(destination: Nutrition(exerciseModel: exerciseModel)) {
                             Image("food")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
@@ -82,18 +83,68 @@ struct UserInfo: View {
 }
 
 struct Nutrition: View {
-    var body: some View {
-        NavigationView {
-            Text("Back")
+        var exerciseModel: ExerciseModel
+        init(exerciseModel: ExerciseModel) {
+            self.exerciseModel = exerciseModel
+            exerciseModel.loadFromUserDefaults() // Load data when Nutrition view is initialized
+        }
+        var body: some View {
+                VStack {
+                    VStack {
+                        VStack(spacing: 70) {
+                            Text("Plan")
+                                .font(.system(size: 45))
+                                .bold()
+                                .foregroundColor(.gray)
+                                .kerning(2)
+                                .shadow(color: .gray, radius: 3, x: 3, y: 8)
+                            Text("Day 1")
+                                .font(.system(size: 30))
+                                .bold()
+                                .foregroundColor(Color.blue.opacity(0.42))
+                                .kerning(2)
+                                .shadow(color: .gray, radius: 6, x: 1, y: 6)
+                        }
+                        VStack(spacing: 12) {
+                            ForEach(exerciseModel.day1Exercises, id: \.name) { exercise in
+                                Text(exercise.name)
+                                    .font(.system(size: 20))
+                                    .bold()
+                                    .foregroundColor(Color.blue.opacity(0.38))
+                                    .kerning(2)
+                            }
+                        }
+                        Text("Day 2")
+                            .font(.system(size: 30))
+                            .bold()
+                            .foregroundColor(Color.blue.opacity(0.42))
+                            .kerning(2)
+                            .shadow(color: .gray, radius: 6, x: 1, y: 6)
+                            .padding(.top, 40)
+                        
+                        VStack(spacing: 12) {
+                            ForEach(exerciseModel.day2Exercises, id: \.name) { exercise in
+                                Text(exercise.name)
+                                    .font(.system(size: 20))
+                                    .bold()
+                                    .foregroundColor(Color.blue.opacity(0.38))
+                                    .kerning(2)
+                            }
+                        }
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.blue.opacity(0.3))
+                }
         }
     }
-}
+
 
 struct WorkoutPlanning: View {
     @State private var selectedDays: String?
     @State private var selectedEmphasis: String?
+    var exerciseModel: ExerciseModel
     var body: some View {
-            NumDays(selectedDays: $selectedDays, selectedEmphasis: $selectedEmphasis)
+            NumDays(selectedDays: $selectedDays, selectedEmphasis: $selectedEmphasis, exerciseModel: exerciseModel)
     }
 }
 
@@ -107,6 +158,7 @@ struct NumDays: View {
     ]
     @Binding var selectedDays: String?
     @Binding var selectedEmphasis: String?
+    var exerciseModel: ExerciseModel
     var body: some View {
         VStack(spacing: 20) {
             ZStack {
@@ -136,7 +188,7 @@ struct NumDays: View {
             }
             Spacer()
             VStack {
-                NavigationLink(destination: Emphasis(selectedDays: $selectedDays, selectedEmphasis: $selectedEmphasis)) {
+                NavigationLink(destination: Emphasis(selectedDays: $selectedDays, selectedEmphasis: $selectedEmphasis, exerciseModel: exerciseModel)) {
                     Text("Next")
                         .foregroundColor(.black)
                         .cornerRadius(20)
@@ -176,6 +228,7 @@ struct Emphasis: View {
     @Binding var selectedEmphasis: String?
     @State private var LegOptions = false
     @State private var ArmOptions = false
+    var exerciseModel: ExerciseModel
     var body: some View {
         VStack(spacing: 20) {
             ZStack {
@@ -215,7 +268,7 @@ struct Emphasis: View {
             
             VStack {
                 
-                NavigationLink(destination: Check(selectedDays: $selectedDays, selectedEmphasis: $selectedEmphasis)) {
+                NavigationLink(destination: Plan(selectedDays: $selectedDays, selectedEmphasis: $selectedEmphasis, exerciseModel: exerciseModel)) {
                     Text("Next")
                         .foregroundColor(.black)
                         .cornerRadius(20)
@@ -231,78 +284,70 @@ struct Emphasis: View {
     }
 }
 
-struct Check: View {
+
+struct Plan: View {
     @Binding var selectedDays: String?
     @Binding var selectedEmphasis: String?
+    var exerciseModel: ExerciseModel
     var body: some View {
         VStack {
             if selectedDays == nil || selectedEmphasis == nil {
                 Text("Error: Missing Days or Emphasis")
                 .foregroundColor(.black)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.blue.opacity(0.3))
             }
             else {
-                VStack {
-                    Image("letsee")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 500, height: 350)
-                    
-                    Text("Selected Days: \(selectedDays!)")
-                    Text("Selected Emphasis: \(selectedEmphasis!)")
+                if selectedDays == "Two" {
+                    VStack {
+                        TwoDay(selectedEmphasis: selectedEmphasis, selectedDays: selectedDays, exerciseModel: exerciseModel)
                         
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 30)
-                            .fill(Color.gray.opacity(0.2))
-                            .frame(width: 240, height: 90)
-                            .overlay(
-                        NavigationLink(destination: Plan(selectedDays: $selectedDays, selectedEmphasis: $selectedEmphasis)) {
-                            HStack {
-                                Text("Get")
-                                    .font(.system(size: 35))
-                                    .bold()
-                                    .foregroundColor(Color.gray.opacity(0.9))
-                                    .kerning(2) // Adjust letter spacing
-                                    .shadow(color: Color.gray.opacity(0.9), radius: 3, x: 3, y: 8) // Add a shadow effect
-                                Text("Plan")
-                                    .font(.system(size: 35))
-                                    .bold()
-                                    .foregroundColor(.gray)
-                                    .kerning(2) // Adjust letter spacing
-                                    .shadow(color: .gray, radius: 3, x: 3, y: 8) // Add a shadow effect
-                                }
-                                //.padding(.horizontal)
-                            }
-                        )
                     }
-                    .padding(.top, 155)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.blue.opacity(0.3))
+                }
+                else {
+                    Text("Workout")
+                        .font(.system(size: 35))
+                        .bold()
+                        .foregroundColor(Color.gray.opacity(0.9))
                 }
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.blue.opacity(0.3))
     }
 }
 
-struct Plan: View {
-    @Binding var selectedDays: String?
-    @Binding var selectedEmphasis: String?
-    var body: some View {
-        VStack {
-            if selectedDays == "Two" {
-                TwoDay(selectedEmphasis: selectedEmphasis)
-            }
-            else {
-                Text("Workout")
-                    .font(.system(size: 35))
-                    .bold()
-                    .foregroundColor(Color.gray.opacity(0.9))
-            }
+
+class ExerciseModel: ObservableObject {
+    @Published var day1Exercises = [Exercise]()
+    @Published var day2Exercises = [Exercise]()
+    
+    init() {
+        loadFromUserDefaults()
+    }
+    
+    func saveToUserDefaults() {
+        // Convert the exercises to data
+        if let encoded = try? JSONEncoder().encode(day1Exercises) {
+            UserDefaults.standard.set(encoded, forKey: "day1Exercises")
+        }
+        if let encoded = try? JSONEncoder().encode(day2Exercises) {
+            UserDefaults.standard.set(encoded, forKey: "day2Exercises")
+        }
+    }
+    
+    func loadFromUserDefaults() {
+        // Load the exercises from UserDefaults
+        if let data = UserDefaults.standard.data(forKey: "day1Exercises"),
+           let decoded = try? JSONDecoder().decode([Exercise].self, from: data) {
+            day1Exercises = decoded
+        }
+        if let data = UserDefaults.standard.data(forKey: "day2Exercises"),
+           let decoded = try? JSONDecoder().decode([Exercise].self, from: data) {
+            day2Exercises = decoded
         }
     }
 }
-
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         FirstPage()

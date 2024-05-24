@@ -4,8 +4,9 @@ import SwiftUI
 
 extension TwoDay_Previews {
     @_dynamicReplacement(for: previews) private static var __preview__previews: some View {
-        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 160)
-        TwoDay(selectedEmphasis: __designTimeString("#51758.[3].[0].property.[0].[0].arg[0].value", fallback: "Shoulders"))
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 338)
+        @StateObject var exerciseModel = ExerciseModel()
+        TwoDay(selectedEmphasis: __designTimeString("#51758.[3].[0].property.[0].[1].arg[0].value", fallback: "Glutes"), selectedDays: __designTimeString("#51758.[3].[0].property.[0].[1].arg[1].value", fallback: "3"), exerciseModel: exerciseModel)
     
 #sourceLocation()
     }
@@ -13,7 +14,7 @@ extension TwoDay_Previews {
 
 extension ExerciseDetail {
     @_dynamicReplacement(for: body) private var __preview__body: some View {
-        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 139)
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 317)
         VStack {
             Text(exercise.name)
                 .font(.system(size: __designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 45)))
@@ -36,54 +37,193 @@ extension ExerciseDetail {
 }
 
 extension TwoDay {
-    @_dynamicReplacement(for: initializeExercises()) private func __preview__initializeExercises() {
-        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 77)
+    @_dynamicReplacement(for: initializeExercises3()) private func __preview__initializeExercises3() {
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 195)
+        var selectedExercises: Set<Exercise> = []
         var day1Exercises = [
-            UpperChest().getRandomExercise(),
-            UpperBack().getRandomExercise(),
-            FrontDelts().getRandomExercise(),
-            Biceps().getRandomExercise()
+            UpperChest().getRandomExercise(for: __designTimeString("#51758.[1].[11].[1].value.[0].modifier[0].arg[0].value", fallback: "UpperChest"), excludeLast: __designTimeBoolean("#51758.[1].[11].[1].value.[0].modifier[0].arg[1].value", fallback: false)),
+            UpperBack().getRandomExercise(for: __designTimeString("#51758.[1].[11].[1].value.[1].modifier[0].arg[0].value", fallback: "UpperBack"), excludeLast: __designTimeBoolean("#51758.[1].[11].[1].value.[1].modifier[0].arg[1].value", fallback: false)),
+            Lats().getRandomExercise(for: __designTimeString("#51758.[1].[11].[1].value.[2].modifier[0].arg[0].value", fallback: "Lats"), excludeLast: __designTimeBoolean("#51758.[1].[11].[1].value.[2].modifier[0].arg[1].value", fallback: false)),
+            SideDelts().getRandomExercise(for: __designTimeString("#51758.[1].[11].[1].value.[3].modifier[0].arg[0].value", fallback: "SideDelts"), excludeLast: __designTimeBoolean("#51758.[1].[11].[1].value.[3].modifier[0].arg[1].value", fallback: false)),
+            MidChest().getRandomExercise(for: __designTimeString("#51758.[1].[11].[1].value.[4].modifier[0].arg[0].value", fallback: "MidChest"), excludeLast: __designTimeBoolean("#51758.[1].[11].[1].value.[4].modifier[0].arg[1].value", fallback: false))
         ].compactMap { $0 }
 
         var day2Exercises = [
-            VastusQuads().getRandomExercise(),
-            Hamstrings().getRandomExercise(),
-            Glutes().getRandomExercise(),
-            LongHead().getRandomExercise()
+            Biceps().getRandomExercise(for: __designTimeString("#51758.[1].[11].[2].value.[0].modifier[0].arg[0].value", fallback: "Biceps"), excludeLast: __designTimeBoolean("#51758.[1].[11].[2].value.[0].modifier[0].arg[1].value", fallback: false)),
+            ShortMedialHead().getRandomExercise(for: __designTimeString("#51758.[1].[11].[2].value.[1].modifier[0].arg[0].value", fallback: "ShortMedialHead"), excludeLast: __designTimeBoolean("#51758.[1].[11].[2].value.[1].modifier[0].arg[1].value", fallback: false)),
+            FrontDelts().getRandomExercise(for: __designTimeString("#51758.[1].[11].[2].value.[2].modifier[0].arg[0].value", fallback: "SideDelts"), excludeLast: __designTimeBoolean("#51758.[1].[11].[2].value.[2].modifier[0].arg[1].value", fallback: false)),
+            LongHead().getRandomExercise(for: __designTimeString("#51758.[1].[11].[2].value.[3].modifier[0].arg[0].value", fallback: "LongHead"), excludeLast: __designTimeBoolean("#51758.[1].[11].[2].value.[3].modifier[0].arg[1].value", fallback: false))
         ].compactMap { $0 }
+        var day3Exercises = [
+            VastusQuads().getRandomExercise(for: __designTimeString("#51758.[1].[11].[3].value.[0].modifier[0].arg[0].value", fallback: "VastusQuads"), excludeLast: __designTimeBoolean("#51758.[1].[11].[3].value.[0].modifier[0].arg[1].value", fallback: false)),
+            RecQuads().getRandomExercise(for: __designTimeString("#51758.[1].[11].[3].value.[1].modifier[0].arg[0].value", fallback: "RecQuads"), excludeLast: __designTimeBoolean("#51758.[1].[11].[3].value.[1].modifier[0].arg[1].value", fallback: false)),
+            Hamstrings().getRandomExercise(for: __designTimeString("#51758.[1].[11].[3].value.[2].modifier[0].arg[0].value", fallback: "Hamstrings"), excludeLast: __designTimeBoolean("#51758.[1].[11].[3].value.[2].modifier[0].arg[1].value", fallback: false)),
+            Glutes().getRandomExercise(for: __designTimeString("#51758.[1].[11].[3].value.[3].modifier[0].arg[0].value", fallback: "Glutes"), excludeLast: __designTimeBoolean("#51758.[1].[11].[3].value.[3].modifier[0].arg[1].value", fallback: false)),
+        ].compactMap { $0 }
+        
+        selectedExercises.formUnion(day1Exercises)
+        selectedExercises.formUnion(day2Exercises)
+        selectedExercises.formUnion(day3Exercises)
 
         if let emphasis = selectedEmphasis {
             switch emphasis {
             case "Chest":
-                if let exercise = MidChest().getRandomExercise() {
+                var exercise: Exercise?
+                repeat {
+                    exercise = UpperChest().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[0].[1].[0].[0]", fallback: "UpperChest"), excludeLast: false)
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day1Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Back":
+                var exercise: Exercise?
+                repeat {
+                    exercise = Lats().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[1].[1].[0].[0]", fallback: "Lats"), excludeLast: false)
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day1Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Shoulders":
+                var exercise: Exercise?
+                repeat {
+                    exercise = FrontDelts().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[2].[1].[0].[0]", fallback: "Shoulders"), excludeLast: false)
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day2Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Biceps":
+                var exercise: Exercise?
+                repeat {
+                    exercise = Brachialis().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[3].[1].[0].[0]", fallback: "Brachialis"), excludeLast: false)
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day2Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Quads":
+                var exercise: Exercise?
+                repeat {
+                    exercise = VastusQuads().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[4].[1].[0].[0]", fallback: "VastusQuads"), excludeLast: false)
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day3Exercises.append(uniqueExercise)
+                }
+            case "Hamstrings":
+                var exercise: Exercise?
+                repeat {
+                    exercise = Hamstrings().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[5].[1].[0].[0]", fallback: "Hamstrings"), excludeLast: false)
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day3Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Glutes":
+                var exercise: Exercise?
+                repeat {
+                    exercise = Glutes().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[6].[1].[0].[0]", fallback: "Glutes"), excludeLast: false)
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day3Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Triceps":
+                var exercise: Exercise?
+                repeat {
+                    exercise = LongHead().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[7].[1].[0].[0]", fallback: "LongHead"), excludeLast: false)
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day2Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            default:
+                break
+            }
+        }
+
+        randomExercisesDay1 = day1Exercises
+        randomExercisesDay2 = day2Exercises
+        randomExercisesDay3 = day3Exercises
+    
+#sourceLocation()
+    }
+}
+
+extension TwoDay {
+    @_dynamicReplacement(for: initializeExercises2()) private func __preview__initializeExercises2() {
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 122)
+        var selectedExercises: Set<Exercise> = []
+        var day1Exercises = [
+            UpperChest().getRandomExercise(for: __designTimeString("#51758.[1].[10].[1].value.[0].modifier[0].arg[0].value", fallback: "UpperChest"), excludeLast: __designTimeBoolean("#51758.[1].[10].[1].value.[0].modifier[0].arg[1].value", fallback: false)),
+            UpperBack().getRandomExercise(for: __designTimeString("#51758.[1].[10].[1].value.[1].modifier[0].arg[0].value", fallback: "UpperBack"), excludeLast: __designTimeBoolean("#51758.[1].[10].[1].value.[1].modifier[0].arg[1].value", fallback: false)),
+            FrontDelts().getRandomExercise(for: __designTimeString("#51758.[1].[10].[1].value.[2].modifier[0].arg[0].value", fallback: "FrontDelts"), excludeLast: __designTimeBoolean("#51758.[1].[10].[1].value.[2].modifier[0].arg[1].value", fallback: false)),
+            Biceps().getRandomExercise(for: __designTimeString("#51758.[1].[10].[1].value.[3].modifier[0].arg[0].value", fallback: "Biceps"), excludeLast: __designTimeBoolean("#51758.[1].[10].[1].value.[3].modifier[0].arg[1].value", fallback: false))
+        ].compactMap { $0 }
+
+        var day2Exercises = [
+            VastusQuads().getRandomExercise(for: __designTimeString("#51758.[1].[10].[2].value.[0].modifier[0].arg[0].value", fallback: "VastusQuads"), excludeLast: __designTimeBoolean("#51758.[1].[10].[2].value.[0].modifier[0].arg[1].value", fallback: false)),
+            Hamstrings().getRandomExercise(for: __designTimeString("#51758.[1].[10].[2].value.[1].modifier[0].arg[0].value", fallback: "Hamstrings"), excludeLast: __designTimeBoolean("#51758.[1].[10].[2].value.[1].modifier[0].arg[1].value", fallback: false)),
+            Glutes().getRandomExercise(for: __designTimeString("#51758.[1].[10].[2].value.[2].modifier[0].arg[0].value", fallback: "Glutes"), excludeLast: __designTimeBoolean("#51758.[1].[10].[2].value.[2].modifier[0].arg[1].value", fallback: false)),
+            LongHead().getRandomExercise(for: __designTimeString("#51758.[1].[10].[2].value.[3].modifier[0].arg[0].value", fallback: "LongHead"), excludeLast: __designTimeBoolean("#51758.[1].[10].[2].value.[3].modifier[0].arg[1].value", fallback: false))
+        ].compactMap { $0 }
+        
+        selectedExercises.formUnion(day1Exercises)
+        selectedExercises.formUnion(day2Exercises)
+
+        if let emphasis = selectedEmphasis {
+            switch emphasis {
+            case "Chest":
+                if let exercise = MidChest().getRandomExercise(for: "MidChest", excludeLast: false) {
                     day1Exercises.append(exercise)
                 }
             case "Back":
-                if let exercise = Lats().getRandomExercise() {
+                if let exercise = Lats().getRandomExercise(for: "Lats", excludeLast: false) {
                     day1Exercises.append(exercise)
                 }
             case "Shoulders":
-                if let exercise = SideDelts().getRandomExercise() {
+                if let exercise = SideDelts().getRandomExercise(for: "Shoulders", excludeLast: false) {
                     day1Exercises.append(exercise)
                 }
             case "Biceps":
-                if let exercise = Brachialis().getRandomExercise() {
+                if let exercise = Brachialis().getRandomExercise(for: "Brachialis", excludeLast: false) {
                     day1Exercises.append(exercise)
                 }
             case "Quads":
-                if let exercise = RecQuads().getRandomExercise() {
+                if let exercise = RecQuads().getRandomExercise(for: "RecQuads", excludeLast: false) {
                     day2Exercises.append(exercise)
                 }
             case "Hamstrings":
-                if let exercise = Hamstrings().getRandomExercise() {
-                    day2Exercises.append(exercise)
+                var exercise: Exercise?
+                repeat {
+                    exercise = Hamstrings().getRandomExercise(for: __designTimeString("#51758.[1].[10].[5].[0].[0].[5].[1].[0].[0]", fallback: "Hamstrings"), excludeLast: false)
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day2Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
                 }
             case "Glutes":
-                if let exercise = Glutes().getRandomExercise() {
-                    day2Exercises.append(exercise)
+                var exercise: Exercise?
+                repeat {
+                    exercise = Glutes().getRandomExercise(for: __designTimeString("#51758.[1].[10].[5].[0].[0].[6].[1].[0].[0]", fallback: "Glutes"), excludeLast: false)
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day2Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
                 }
             case "Triceps":
-                if let exercise = ShortMedialHead().getRandomExercise() {
+                if let exercise = ShortMedialHead().getRandomExercise(for: "ShortMedialHead", excludeLast: false) {
                     day2Exercises.append(exercise)
                 }
             default:
@@ -100,63 +240,104 @@ extension TwoDay {
 
 extension TwoDay {
     @_dynamicReplacement(for: body) private var __preview__body: some View {
-        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 17)
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 21)
         NavigationView {
-            VStack {
-                VStack {
-                    VStack(spacing: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value", fallback: 70)) {
-                        Text(__designTimeString("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].arg[0].value", fallback: "Plan"))
-                            .font(.system(size: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 45)))
-                            .bold()
-                            .foregroundColor(.gray)
-                            .kerning(__designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
-                            .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[1].value", fallback: 3), x: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[2].value", fallback: 3), y: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[3].value", fallback: 8))
-                        Text(__designTimeString("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].arg[0].value", fallback: "Day 1"))
-                            .font(.system(size: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
-                            .bold()
-                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
-                            .kerning(__designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[3].arg[0].value", fallback: 2))
-                            .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[3].value", fallback: 6))
-                    }
-                    VStack(spacing: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[0].value", fallback: 12)) {
-                        ForEach(randomExercisesDay1, id: \.self) { exercise in
-                            NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
-                                Text(exercise.name)
-                                    .font(.system(size: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
-                                    .bold()
-                                    .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
-                                    .kerning(__designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+            ScrollView {
+                VStack{
+                    VStack {
+                        VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value", fallback: 70)) {
+                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].arg[0].value", fallback: "Plan"))
+                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 45)))
+                                .bold()
+                                .foregroundColor(.gray)
+                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[1].value", fallback: 3), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[2].value", fallback: 3), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[3].value", fallback: 8))
+                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[5].arg[1].value", fallback: 40))
+                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].arg[0].value", fallback: "Day 1"))
+                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                                .bold()
+                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[3].value", fallback: 6))
+                        }
+                        VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[0].value", fallback: 12)) {
+                            ForEach(randomExercisesDay1, id: \.self) { exercise in
+                                NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
+                                    Text(exercise.name)
+                                        .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                        .bold()
+                                        .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                        .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                }
                             }
                         }
-                    }
 
-                    Text(__designTimeString("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].arg[0].value", fallback: "Day 2"))
-                        .font(.system(size: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
-                        .bold()
-                        .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
-                        .kerning(__designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[3].arg[0].value", fallback: 2))
-                        .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[3].value", fallback: 6))
-                        .padding(.top, __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[5].arg[1].value", fallback: 40))
+                        Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].arg[0].value", fallback: "Day 2"))
+                            .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                            .bold()
+                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                            .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[3].arg[0].value", fallback: 2))
+                            .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[3].value", fallback: 6))
+                            .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[5].arg[1].value", fallback: 40))
 
-                    VStack(spacing: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[0].value", fallback: 12)) {
-                        ForEach(randomExercisesDay2, id: \.self) { exercise in
-                            NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
-                                Text(exercise.name)
-                                    .font(.system(size: __designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
-                                    .bold()
-                                    .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
-                                    .kerning(__designTimeInteger("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                        VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[0].value", fallback: 12)) {
+                            ForEach(randomExercisesDay2, id: \.self) { exercise in
+                                NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
+                                    Text(exercise.name)
+                                        .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                        .bold()
+                                        .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                        .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                }
                             }
                         }
+                        if selectedDays == "3" {
+                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].arg[0].value", fallback: "Day 3"))
+                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                                .bold()
+                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[4].arg[3].value", fallback: 6))
+                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[5].arg[1].value", fallback: 40))
+
+                            VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[0].value", fallback: 12)) {
+                                ForEach(randomExercisesDay3, id: \.self) { exercise in
+                                    NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
+                                        Text(exercise.name)
+                                            .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                            .bold()
+                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                            .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                    }
+                                }
+                            }
+
+                        }
+                        Button(action: {
+                            // Update exercises for Nutrition
+                            exerciseModel.day1Exercises = randomExercisesDay1
+                            exerciseModel.day2Exercises = randomExercisesDay2
+                            exerciseModel.saveToUserDefaults()
+                        }) {
+                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].arg[1].value.[0].arg[0].value", fallback: "Update Nutrition"))
+                                .foregroundColor(.black)
+                                .padding()
+                                .background(RoundedRectangle(cornerRadius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].arg[1].value.[0].modifier[2].arg[0].value.arg[0].value", fallback: 10)).stroke(Color.black, lineWidth: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[1].value", fallback: 2)))
+                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].arg[1].value.[0].modifier[3].arg[1].value", fallback: 50))
+                        }
                     }
-                    
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.blue.opacity(__designTimeFloat("#51758.[1].[3].property.[0].[0].arg[0].value.[0].arg[0].value.[0].modifier[1].arg[0].value.modifier[0].arg[0].value", fallback: 0.3)))
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].modifier[1].arg[0].value.modifier[0].arg[0].value", fallback: 0.3)))
         }
         .onAppear {
-            initializeExercises()
+            if selectedDays == "2" {
+                initializeExercises2()
+            }
+            if selectedDays == "3" {
+                initializeExercises3()
+            }
         }
     
 #sourceLocation()

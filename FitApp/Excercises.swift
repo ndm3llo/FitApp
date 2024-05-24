@@ -10,18 +10,34 @@ import Foundation
 class MuscleGroup {
     let name: String
     var exercises: [Exercise]
-    
+    private var lastSelectedIndexes: [String: Int] = [:]
+
     init(name: String, exercises: [Exercise]) {
         self.name = name
         self.exercises = exercises
     }
-    func getRandomExercise() -> Exercise? {
-            guard !exercises.isEmpty else { return nil }
-            let randomIndex = Int.random(in: 0..<exercises.count)
-            return exercises[randomIndex]
+
+    func getRandomExercise(for bodyPart: String, excludeLast: Bool = false) -> Exercise? {
+        guard !exercises.isEmpty else { return nil }
+        
+        // Determine the available indexes
+        let availableIndexes: [Int]
+        if excludeLast, let lastIndex = lastSelectedIndexes[bodyPart] {
+            availableIndexes = exercises.indices.filter { $0 != lastIndex }
+        } else {
+            availableIndexes = Array(exercises.indices)
+        }
+
+        guard let randomIndex = availableIndexes.randomElement() else { return nil }
+
+        // Update the last selected index for the specific body part
+        lastSelectedIndexes[bodyPart] = randomIndex
+
+        return exercises[randomIndex]
     }
 }
-class Exercise {
+
+class Exercise: Codable {
     let name: String
     let videoURL: URL
     let bodyPart: String
@@ -30,6 +46,7 @@ class Exercise {
            self.videoURL = videoURL
         self.bodyPart = bodyPart
     }
+    
 }
 
 //Chest
@@ -98,7 +115,7 @@ class RearDelts: MuscleGroup {
     init() {
         super.init(name: "Rear Delts", exercises: [
             Exercise(name: "Dumbell Rear Delt Fly", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "RearDelts"),
-            Exercise(name: "Reverse Pec Dec", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "ReadDelts"),
+            Exercise(name: "Reverse Pec Dec", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "RearDelts"),
             Exercise(name: "Cable Rear Delt Fly", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "RearDelts")
         ])
     }
@@ -108,7 +125,7 @@ class RearDelts: MuscleGroup {
 class Biceps: MuscleGroup {
     init() {
         super.init(name: "Biceps", exercises: [
-            Exercise(name: "Dumbell Curl", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Biecps"),
+            Exercise(name: "Dumbell Curl", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Biceps"),
             Exercise(name: "Cable Curl", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Biceps"),
             Exercise(name: "Preacher Curl", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Biceps"),
             Exercise(name: "Bar Curl", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Biceps")
@@ -163,7 +180,7 @@ class RecQuads: MuscleGroup {
 class Glutes: MuscleGroup {
     init() {
         super.init(name: "Glutes", exercises: [
-            Exercise(name: "Quad Hack Squat", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Glutes"),
+            Exercise(name: "Glute Hack Squat", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Glutes"),
             Exercise(name: "RDL", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Glutes"),
             Exercise(name: "Glute Leg Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Glutes")
         ])

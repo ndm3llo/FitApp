@@ -4,27 +4,11 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Workout"
-      },
-      {
-        "comment": "",
         "key": "Error: Missing Days or Emphasis"
       },
       {
         "comment": "",
-        "key": "Selected Days: %@"
-      },
-      {
-        "comment": "",
-        "key": "Selected Emphasis: %@"
-      },
-      {
-        "comment": "",
-        "key": "Get"
-      },
-      {
-        "comment": "",
-        "key": "Plan"
+        "key": "Workout"
       },
       {
         "comment": "",
@@ -41,6 +25,18 @@
       {
         "comment": "",
         "key": "How many days a week can you workout (At least 45 minutes)?"
+      },
+      {
+        "comment": "",
+        "key": "Day 2"
+      },
+      {
+        "comment": "",
+        "key": "Plan"
+      },
+      {
+        "comment": "",
+        "key": "Day 1"
       },
       {
         "comment": "",

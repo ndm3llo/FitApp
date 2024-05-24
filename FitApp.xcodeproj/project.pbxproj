@@ -14,7 +14,6 @@
 		372588452BF5395700661C24 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372588442BF5395700661C24 /* Dropdown.swift */; };
 		372588472BF6601E00661C24 /* Excercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372588462BF6601E00661C24 /* Excercises.swift */; };
 		372588492BFC45D200661C24 /* TwoDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372588482BFC45D200661C24 /* TwoDay.swift */; };
-		3725884B2BFCCEE500661C24 /* TwoDayStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725884A2BFCCEE500661C24 /* TwoDayStatic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +25,6 @@
 		372588442BF5395700661C24 /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
 		372588462BF6601E00661C24 /* Excercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excercises.swift; sourceTree = "<group>"; };
 		372588482BFC45D200661C24 /* TwoDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDay.swift; sourceTree = "<group>"; };
-		3725884A2BFCCEE500661C24 /* TwoDayStatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDayStatic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +61,6 @@
 				372588382BF4FEF800661C24 /* ContentView.swift */,
 				372588442BF5395700661C24 /* Dropdown.swift */,
 				372588482BFC45D200661C24 /* TwoDay.swift */,
-				3725884A2BFCCEE500661C24 /* TwoDayStatic.swift */,
 				372588462BF6601E00661C24 /* Excercises.swift */,
 				3725883A2BF4FEFA00661C24 /* Assets.xcassets */,
 				3725883C2BF4FEFA00661C24 /* Preview Content */,
@@ -150,7 +147,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				372588392BF4FEF800661C24 /* ContentView.swift in Sources */,
-				3725884B2BFCCEE500661C24 /* TwoDayStatic.swift in Sources */,
 				372588492BFC45D200661C24 /* TwoDay.swift in Sources */,
 				372588472BF6601E00661C24 /* Excercises.swift in Sources */,
 				372588452BF5395700661C24 /* Dropdown.swift in Sources */,

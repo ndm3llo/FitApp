@@ -16,6 +16,18 @@
       },
       {
         "comment": "",
+        "key": "Day 2"
+      },
+      {
+        "comment": "",
+        "key": "Plan"
+      },
+      {
+        "comment": "",
+        "key": "Day 1"
+      },
+      {
+        "comment": "",
         "key": "Workout Planning"
       },
       {
@@ -33,22 +45,6 @@
       {
         "comment": "",
         "key": "Error: Missing Days or Emphasis"
-      },
-      {
-        "comment": "",
-        "key": "Selected Days: %@"
-      },
-      {
-        "comment": "",
-        "key": "Selected Emphasis: %@"
-      },
-      {
-        "comment": "",
-        "key": "Get"
-      },
-      {
-        "comment": "",
-        "key": "Plan"
       }
     ]
   },
