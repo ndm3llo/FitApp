@@ -4,9 +4,9 @@ import SwiftUI
 
 extension TwoDay_Previews {
     @_dynamicReplacement(for: previews) private static var __preview__previews: some View {
-        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 338)
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 1002)
         @StateObject var exerciseModel = ExerciseModel()
-        TwoDay(selectedEmphasis: __designTimeString("#51758.[3].[0].property.[0].[1].arg[0].value", fallback: "Glutes"), selectedDays: __designTimeString("#51758.[3].[0].property.[0].[1].arg[1].value", fallback: "3"), exerciseModel: exerciseModel)
+        TwoDay(selectedEmphasis: __designTimeString("#51758.[3].[0].property.[0].[1].arg[0].value", fallback: "Quads"), selectedDays: __designTimeString("#51758.[3].[0].property.[0].[1].arg[1].value", fallback: "Six"), exerciseModel: exerciseModel)
     
 #sourceLocation()
     }
@@ -14,7 +14,7 @@ extension TwoDay_Previews {
 
 extension ExerciseDetail {
     @_dynamicReplacement(for: body) private var __preview__body: some View {
-        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 317)
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 981)
         VStack {
             Text(exercise.name)
                 .font(.system(size: __designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 45)))
@@ -37,28 +37,629 @@ extension ExerciseDetail {
 }
 
 extension TwoDay {
-    @_dynamicReplacement(for: initializeExercises3()) private func __preview__initializeExercises3() {
-        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 195)
+    @_dynamicReplacement(for: initializeExercises6()) private func __preview__initializeExercises6() {
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 658)
         var selectedExercises: Set<Exercise> = []
         var day1Exercises = [
-            UpperChest().getRandomExercise(for: __designTimeString("#51758.[1].[11].[1].value.[0].modifier[0].arg[0].value", fallback: "UpperChest"), excludeLast: __designTimeBoolean("#51758.[1].[11].[1].value.[0].modifier[0].arg[1].value", fallback: false)),
-            UpperBack().getRandomExercise(for: __designTimeString("#51758.[1].[11].[1].value.[1].modifier[0].arg[0].value", fallback: "UpperBack"), excludeLast: __designTimeBoolean("#51758.[1].[11].[1].value.[1].modifier[0].arg[1].value", fallback: false)),
-            Lats().getRandomExercise(for: __designTimeString("#51758.[1].[11].[1].value.[2].modifier[0].arg[0].value", fallback: "Lats"), excludeLast: __designTimeBoolean("#51758.[1].[11].[1].value.[2].modifier[0].arg[1].value", fallback: false)),
-            SideDelts().getRandomExercise(for: __designTimeString("#51758.[1].[11].[1].value.[3].modifier[0].arg[0].value", fallback: "SideDelts"), excludeLast: __designTimeBoolean("#51758.[1].[11].[1].value.[3].modifier[0].arg[1].value", fallback: false)),
-            MidChest().getRandomExercise(for: __designTimeString("#51758.[1].[11].[1].value.[4].modifier[0].arg[0].value", fallback: "MidChest"), excludeLast: __designTimeBoolean("#51758.[1].[11].[1].value.[4].modifier[0].arg[1].value", fallback: false))
+            UpperChest().getRandomExercise(),
+            MidChest().getRandomExercise()
+        ].compactMap { $0 }
+        selectedExercises.formUnion(day1Exercises)
+        var exercise1: Exercise?
+        repeat {
+            exercise1 = UpperChest().getRandomExercise()
+        } while exercise1 != nil && selectedExercises.contains { $0.name == exercise1!.name }
+
+        if let uniqueExercise = exercise1 {
+            day1Exercises.append(uniqueExercise)
+            selectedExercises.insert(uniqueExercise)
+        }
+        var exercise2: Exercise?
+        repeat {
+            exercise2 = MidChest().getRandomExercise()
+        } while exercise2 != nil && selectedExercises.contains { $0.name == exercise2!.name }
+
+        if let uniqueExercise = exercise2 {
+            day1Exercises.append(uniqueExercise)
+            selectedExercises.insert(uniqueExercise)
+        }
+        var day2Exercises: [Exercise] = []
+        var day3Exercises: [Exercise] = []
+        var day4Exercises: [Exercise] = []
+        var day5Exercises: [Exercise] = []
+        var day6Exercises: [Exercise] = []
+
+        if selectedEmphasis == "Shoulders" {
+            day2Exercises = [
+                FrontDelts().getRandomExercise(),
+                SideDelts().getRandomExercise(),
+                RearDelts().getRandomExercise()
+            ].compactMap { $0 }
+            day3Exercises = [
+                UpperBack().getRandomExercise(),
+                Lats().getRandomExercise()
+            ].compactMap { $0 }
+            selectedExercises.formUnion(day3Exercises)
+            var exercise3: Exercise?
+            repeat {
+                exercise3 = Lats().getRandomExercise()
+            } while exercise3 != nil && selectedExercises.contains { $0.name == exercise3!.name }
+
+            if let uniqueExercise = exercise3 {
+                day3Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            var exercise4: Exercise?
+            repeat {
+                exercise4 = UpperBack().getRandomExercise()
+            } while exercise4 != nil && selectedExercises.contains { $0.name == exercise4!.name }
+
+            if let uniqueExercise = exercise4 {
+                day3Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            day4Exercises = [
+                Biceps().getRandomExercise(),
+                Brachialis().getRandomExercise(),
+                LongHead().getRandomExercise(),
+                ShortMedialHead().getRandomExercise()
+            ].compactMap { $0 }
+            day5Exercises = [
+                FrontDelts().getRandomExercise(),
+                SideDelts().getRandomExercise(),
+                RearDelts().getRandomExercise()
+            ].compactMap { $0 }
+            day6Exercises = [
+                VastusQuads().getRandomExercise(),
+                RecQuads().getRandomExercise(),
+                Hamstrings().getRandomExercise(),
+                Glutes().getRandomExercise()
+            ].compactMap { $0 }
+        }
+        else if selectedEmphasis == "Back" {
+            day2Exercises = [
+                UpperBack().getRandomExercise(),
+                Lats().getRandomExercise()
+            ].compactMap { $0 }
+            selectedExercises.formUnion(day2Exercises)
+            var exercise3: Exercise?
+            repeat {
+                exercise3 = Lats().getRandomExercise()
+            } while exercise3 != nil && selectedExercises.contains { $0.name == exercise3!.name }
+
+            if let uniqueExercise = exercise3 {
+                day2Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            var exercise4: Exercise?
+            repeat {
+                exercise4 = UpperBack().getRandomExercise()
+            } while exercise4 != nil && selectedExercises.contains { $0.name == exercise4!.name }
+
+            if let uniqueExercise = exercise4 {
+                day2Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            day3Exercises = [
+                FrontDelts().getRandomExercise(),
+                SideDelts().getRandomExercise(),
+                RearDelts().getRandomExercise()
+            ].compactMap { $0 }
+            day4Exercises = [
+                Biceps().getRandomExercise(),
+                Brachialis().getRandomExercise(),
+                LongHead().getRandomExercise(),
+                ShortMedialHead().getRandomExercise()
+            ].compactMap { $0 }
+            day5Exercises = [
+                UpperBack().getRandomExercise(),
+                Lats().getRandomExercise()
+            ].compactMap { $0 }
+            selectedExercises.removeAll()
+            selectedExercises.formUnion(day5Exercises)
+            var exercise: Exercise?
+            repeat {
+                exercise = Lats().getRandomExercise()
+            } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+            if let uniqueExercise = exercise {
+                day5Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            var exercise5: Exercise?
+            repeat {
+                exercise5 = UpperBack().getRandomExercise()
+            } while exercise5 != nil && selectedExercises.contains { $0.name == exercise5!.name }
+
+            if let uniqueExercise = exercise5 {
+                day5Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            day6Exercises = [
+                VastusQuads().getRandomExercise(),
+                RecQuads().getRandomExercise(),
+                Hamstrings().getRandomExercise(),
+                Glutes().getRandomExercise()
+            ].compactMap { $0 }
+        }
+        else if selectedEmphasis == "Biceps" || selectedEmphasis == "Triceps" {
+            day2Exercises = [
+                UpperBack().getRandomExercise(),
+                Lats().getRandomExercise()
+            ].compactMap { $0 }
+            selectedExercises.formUnion(day2Exercises)
+            var exercise3: Exercise?
+            repeat {
+                exercise3 = Lats().getRandomExercise()
+            } while exercise3 != nil && selectedExercises.contains { $0.name == exercise3!.name }
+
+            if let uniqueExercise = exercise3 {
+                day2Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            var exercise4: Exercise?
+            repeat {
+                exercise4 = UpperBack().getRandomExercise()
+            } while exercise4 != nil && selectedExercises.contains { $0.name == exercise4!.name }
+
+            if let uniqueExercise = exercise4 {
+                day2Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            day3Exercises = [
+                Biceps().getRandomExercise(),
+                Brachialis().getRandomExercise(),
+                LongHead().getRandomExercise(),
+                ShortMedialHead().getRandomExercise()
+            ].compactMap { $0 }
+            day4Exercises = [
+                FrontDelts().getRandomExercise(),
+                SideDelts().getRandomExercise(),
+                RearDelts().getRandomExercise()
+            ].compactMap { $0 }
+            day5Exercises = [
+                VastusQuads().getRandomExercise(),
+                RecQuads().getRandomExercise(),
+                Hamstrings().getRandomExercise(),
+                Glutes().getRandomExercise()
+            ].compactMap { $0 }
+            day6Exercises = [
+                Biceps().getRandomExercise(),
+                Brachialis().getRandomExercise(),
+                LongHead().getRandomExercise(),
+                ShortMedialHead().getRandomExercise()
+            ].compactMap { $0 }
+        }
+        else if selectedEmphasis == "Chest" {
+            day2Exercises = [
+                UpperBack().getRandomExercise(),
+                Lats().getRandomExercise()
+            ].compactMap { $0 }
+            selectedExercises.formUnion(day2Exercises)
+            var exercise3: Exercise?
+            repeat {
+                exercise3 = Lats().getRandomExercise()
+            } while exercise3 != nil && selectedExercises.contains { $0.name == exercise3!.name }
+
+            if let uniqueExercise = exercise3 {
+                day2Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            var exercise4: Exercise?
+            repeat {
+                exercise4 = UpperBack().getRandomExercise()
+            } while exercise4 != nil && selectedExercises.contains { $0.name == exercise4!.name }
+
+            if let uniqueExercise = exercise4 {
+                day2Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            day3Exercises = [
+                Biceps().getRandomExercise(),
+                Brachialis().getRandomExercise(),
+                LongHead().getRandomExercise(),
+                ShortMedialHead().getRandomExercise()
+            ].compactMap { $0 }
+            day4Exercises = [
+                UpperChest().getRandomExercise(),
+                MidChest().getRandomExercise()
+            ].compactMap { $0 }
+            selectedExercises.removeAll()
+            selectedExercises.formUnion(day4Exercises)
+            var exercise6: Exercise?
+            repeat {
+                exercise6 = UpperChest().getRandomExercise()
+            } while exercise6 != nil && selectedExercises.contains { $0.name == exercise6!.name }
+
+            if let uniqueExercise = exercise6 {
+                day4Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            var exercise7: Exercise?
+            repeat {
+                exercise7 = MidChest().getRandomExercise()
+            } while exercise7 != nil && selectedExercises.contains { $0.name == exercise7!.name }
+
+            if let uniqueExercise = exercise7 {
+                day4Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            day5Exercises = [
+                FrontDelts().getRandomExercise(),
+                SideDelts().getRandomExercise(),
+                RearDelts().getRandomExercise()
+            ].compactMap { $0 }
+            day6Exercises = [
+                VastusQuads().getRandomExercise(),
+                RecQuads().getRandomExercise(),
+                Hamstrings().getRandomExercise(),
+                Glutes().getRandomExercise()
+            ].compactMap { $0 }
+        }
+        else {
+            day2Exercises = [
+                UpperBack().getRandomExercise(),
+                Lats().getRandomExercise()
+            ].compactMap { $0 }
+            selectedExercises.formUnion(day2Exercises)
+            var exercise3: Exercise?
+            repeat {
+                exercise3 = Lats().getRandomExercise()
+            } while exercise3 != nil && selectedExercises.contains { $0.name == exercise3!.name }
+
+            if let uniqueExercise = exercise3 {
+                day2Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            var exercise4: Exercise?
+            repeat {
+                exercise4 = UpperBack().getRandomExercise()
+            } while exercise4 != nil && selectedExercises.contains { $0.name == exercise4!.name }
+
+            if let uniqueExercise = exercise4 {
+                day2Exercises.append(uniqueExercise)
+                selectedExercises.insert(uniqueExercise)
+            }
+            day3Exercises = [
+                VastusQuads().getRandomExercise(),
+                RecQuads().getRandomExercise(),
+                Hamstrings().getRandomExercise(),
+                Glutes().getRandomExercise()
+            ].compactMap { $0 }
+            day4Exercises = [
+                Biceps().getRandomExercise(),
+                Brachialis().getRandomExercise(),
+                LongHead().getRandomExercise(),
+                ShortMedialHead().getRandomExercise()
+            ].compactMap { $0 }
+            day5Exercises = [
+                FrontDelts().getRandomExercise(),
+                SideDelts().getRandomExercise(),
+                RearDelts().getRandomExercise()
+            ].compactMap { $0 }
+            day6Exercises = [
+                VastusQuads().getRandomExercise(),
+                RecQuads().getRandomExercise(),
+                Hamstrings().getRandomExercise(),
+                Glutes().getRandomExercise()
+            ].compactMap { $0 }
+        }
+        
+        randomExercisesDay1 = day1Exercises
+        randomExercisesDay2 = day2Exercises
+        randomExercisesDay3 = day3Exercises
+        randomExercisesDay4 = day4Exercises
+        randomExercisesDay5 = day5Exercises
+        randomExercisesDay6 = day6Exercises
+    
+#sourceLocation()
+    }
+}
+
+extension TwoDay {
+    @_dynamicReplacement(for: initializeExercises5()) private func __preview__initializeExercises5() {
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 512)
+        var selectedExercises: Set<Exercise> = []
+        var day1Exercises = [
+            UpperChest().getRandomExercise(),
+            MidChest().getRandomExercise()
         ].compactMap { $0 }
 
         var day2Exercises = [
-            Biceps().getRandomExercise(for: __designTimeString("#51758.[1].[11].[2].value.[0].modifier[0].arg[0].value", fallback: "Biceps"), excludeLast: __designTimeBoolean("#51758.[1].[11].[2].value.[0].modifier[0].arg[1].value", fallback: false)),
-            ShortMedialHead().getRandomExercise(for: __designTimeString("#51758.[1].[11].[2].value.[1].modifier[0].arg[0].value", fallback: "ShortMedialHead"), excludeLast: __designTimeBoolean("#51758.[1].[11].[2].value.[1].modifier[0].arg[1].value", fallback: false)),
-            FrontDelts().getRandomExercise(for: __designTimeString("#51758.[1].[11].[2].value.[2].modifier[0].arg[0].value", fallback: "SideDelts"), excludeLast: __designTimeBoolean("#51758.[1].[11].[2].value.[2].modifier[0].arg[1].value", fallback: false)),
-            LongHead().getRandomExercise(for: __designTimeString("#51758.[1].[11].[2].value.[3].modifier[0].arg[0].value", fallback: "LongHead"), excludeLast: __designTimeBoolean("#51758.[1].[11].[2].value.[3].modifier[0].arg[1].value", fallback: false))
+            UpperBack().getRandomExercise(),
+            Lats().getRandomExercise()
         ].compactMap { $0 }
         var day3Exercises = [
-            VastusQuads().getRandomExercise(for: __designTimeString("#51758.[1].[11].[3].value.[0].modifier[0].arg[0].value", fallback: "VastusQuads"), excludeLast: __designTimeBoolean("#51758.[1].[11].[3].value.[0].modifier[0].arg[1].value", fallback: false)),
-            RecQuads().getRandomExercise(for: __designTimeString("#51758.[1].[11].[3].value.[1].modifier[0].arg[0].value", fallback: "RecQuads"), excludeLast: __designTimeBoolean("#51758.[1].[11].[3].value.[1].modifier[0].arg[1].value", fallback: false)),
-            Hamstrings().getRandomExercise(for: __designTimeString("#51758.[1].[11].[3].value.[2].modifier[0].arg[0].value", fallback: "Hamstrings"), excludeLast: __designTimeBoolean("#51758.[1].[11].[3].value.[2].modifier[0].arg[1].value", fallback: false)),
-            Glutes().getRandomExercise(for: __designTimeString("#51758.[1].[11].[3].value.[3].modifier[0].arg[0].value", fallback: "Glutes"), excludeLast: __designTimeBoolean("#51758.[1].[11].[3].value.[3].modifier[0].arg[1].value", fallback: false)),
+            Biceps().getRandomExercise(),
+            Brachialis().getRandomExercise(),
+            LongHead().getRandomExercise(),
+            ShortMedialHead().getRandomExercise()
+        ].compactMap { $0 }
+        var day4Exercises = [
+            FrontDelts().getRandomExercise(),
+            SideDelts().getRandomExercise(),
+            RearDelts().getRandomExercise()
+        ].compactMap { $0 }
+        var day5Exercises = [
+            VastusQuads().getRandomExercise(),
+            RecQuads().getRandomExercise(),
+            Hamstrings().getRandomExercise(),
+            Glutes().getRandomExercise()
+        ].compactMap { $0 }
+
+        selectedExercises.formUnion(day1Exercises)
+        selectedExercises.formUnion(day2Exercises)
+        selectedExercises.formUnion(day3Exercises)
+        selectedExercises.formUnion(day4Exercises)
+        selectedExercises.formUnion(day5Exercises)
+
+        var exercise1: Exercise?
+        repeat {
+            exercise1 = UpperChest().getRandomExercise()
+        } while exercise1 != nil && selectedExercises.contains { $0.name == exercise1!.name }
+
+        if let uniqueExercise = exercise1 {
+            day1Exercises.append(uniqueExercise)
+            selectedExercises.insert(uniqueExercise)
+        }
+        var exercise2: Exercise?
+        repeat {
+            exercise2 = Lats().getRandomExercise()
+        } while exercise2 != nil && selectedExercises.contains { $0.name == exercise2!.name }
+
+        if let uniqueExercise = exercise2 {
+            day2Exercises.append(uniqueExercise)
+            selectedExercises.insert(uniqueExercise)
+        }
+        
+        if let emphasis = selectedEmphasis {
+            switch emphasis {
+            case "Chest":
+                var exercise: Exercise?
+                repeat {
+                    exercise = MidChest().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day1Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Back":
+                var exercise: Exercise?
+                repeat {
+                    exercise = UpperBack().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day2Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Shoulders":
+                var exercise: Exercise?
+                repeat {
+                    exercise = FrontDelts().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day4Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Biceps":
+                var exercise: Exercise?
+                repeat {
+                    exercise = Biceps().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day3Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Quads":
+                var exercise: Exercise?
+                repeat {
+                    exercise = VastusQuads().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day5Exercises.append(uniqueExercise)
+                }
+            case "Hamstrings":
+                var exercise: Exercise?
+                repeat {
+                    exercise = Hamstrings().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day5Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Glutes":
+                var exercise: Exercise?
+                repeat {
+                    exercise = Glutes().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day5Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Triceps":
+                var exercise: Exercise?
+                repeat {
+                    exercise = LongHead().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day3Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            default:
+                break
+            }
+        }
+        
+        randomExercisesDay1 = day1Exercises
+        randomExercisesDay2 = day2Exercises
+        randomExercisesDay3 = day3Exercises
+        randomExercisesDay4 = day4Exercises
+        randomExercisesDay5 = day5Exercises
+    
+#sourceLocation()
+    }
+}
+
+extension TwoDay {
+    @_dynamicReplacement(for: initializeExercises4()) private func __preview__initializeExercises4() {
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 389)
+        var selectedExercises: Set<Exercise> = []
+        var day1Exercises = [
+            UpperChest().getRandomExercise(),
+            FrontDelts().getRandomExercise(),
+            MidChest().getRandomExercise()
+        ].compactMap { $0 }
+
+        var day2Exercises = [
+            UpperBack().getRandomExercise(),
+            Lats().getRandomExercise(),
+            SideDelts().getRandomExercise(),
+            RearDelts().getRandomExercise()
+        ].compactMap { $0 }
+        var day3Exercises = [
+            Biceps().getRandomExercise(),
+            Brachialis().getRandomExercise(),
+            LongHead().getRandomExercise(),
+            ShortMedialHead().getRandomExercise()
+        ].compactMap { $0 }
+        var day4Exercises = [
+            VastusQuads().getRandomExercise(),
+            RecQuads().getRandomExercise(),
+            Hamstrings().getRandomExercise(),
+            Glutes().getRandomExercise()
+        ].compactMap { $0 }
+        
+        selectedExercises.formUnion(day1Exercises)
+        selectedExercises.formUnion(day2Exercises)
+        selectedExercises.formUnion(day3Exercises)
+        selectedExercises.formUnion(day4Exercises)
+
+        if let emphasis = selectedEmphasis {
+            switch emphasis {
+            case "Chest":
+                var exercise: Exercise?
+                repeat {
+                    exercise = UpperChest().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day1Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Back":
+                var exercise: Exercise?
+                repeat {
+                    exercise = Lats().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day2Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Shoulders":
+                var exercise: Exercise?
+                repeat {
+                    exercise = FrontDelts().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day3Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Biceps":
+                var exercise: Exercise?
+                repeat {
+                    exercise = Biceps().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day3Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Quads":
+                var exercise: Exercise?
+                repeat {
+                    exercise = VastusQuads().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day4Exercises.append(uniqueExercise)
+                }
+            case "Hamstrings":
+                var exercise: Exercise?
+                repeat {
+                    exercise = Hamstrings().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day4Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Glutes":
+                var exercise: Exercise?
+                repeat {
+                    exercise = Glutes().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day4Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            case "Triceps":
+                var exercise: Exercise?
+                repeat {
+                    exercise = LongHead().getRandomExercise()
+                } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
+
+                if let uniqueExercise = exercise {
+                    day3Exercises.append(uniqueExercise)
+                    selectedExercises.insert(uniqueExercise)
+                }
+            default:
+                break
+            }
+        }
+
+        randomExercisesDay1 = day1Exercises
+        randomExercisesDay2 = day2Exercises
+        randomExercisesDay3 = day3Exercises
+        randomExercisesDay4 = day4Exercises
+    
+#sourceLocation()
+    }
+}
+
+extension TwoDay {
+    @_dynamicReplacement(for: initializeExercises3()) private func __preview__initializeExercises3() {
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 272)
+        var selectedExercises: Set<Exercise> = []
+        var day1Exercises = [
+            UpperChest().getRandomExercise(),
+            UpperBack().getRandomExercise(),
+            Lats().getRandomExercise(),
+            SideDelts().getRandomExercise(),
+            MidChest().getRandomExercise()
+        ].compactMap { $0 }
+
+        var day2Exercises = [
+            Biceps().getRandomExercise(),
+            ShortMedialHead().getRandomExercise(),
+            FrontDelts().getRandomExercise(),
+            LongHead().getRandomExercise()
+        ].compactMap { $0 }
+        var day3Exercises = [
+            VastusQuads().getRandomExercise(),
+            RecQuads().getRandomExercise(),
+            Hamstrings().getRandomExercise(),
+            Glutes().getRandomExercise()
         ].compactMap { $0 }
         
         selectedExercises.formUnion(day1Exercises)
@@ -70,7 +671,7 @@ extension TwoDay {
             case "Chest":
                 var exercise: Exercise?
                 repeat {
-                    exercise = UpperChest().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[0].[1].[0].[0]", fallback: "UpperChest"), excludeLast: false)
+                    exercise = UpperChest().getRandomExercise()
                 } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
 
                 if let uniqueExercise = exercise {
@@ -80,7 +681,7 @@ extension TwoDay {
             case "Back":
                 var exercise: Exercise?
                 repeat {
-                    exercise = Lats().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[1].[1].[0].[0]", fallback: "Lats"), excludeLast: false)
+                    exercise = Lats().getRandomExercise()
                 } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
 
                 if let uniqueExercise = exercise {
@@ -90,7 +691,7 @@ extension TwoDay {
             case "Shoulders":
                 var exercise: Exercise?
                 repeat {
-                    exercise = FrontDelts().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[2].[1].[0].[0]", fallback: "Shoulders"), excludeLast: false)
+                    exercise = FrontDelts().getRandomExercise()
                 } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
 
                 if let uniqueExercise = exercise {
@@ -100,7 +701,7 @@ extension TwoDay {
             case "Biceps":
                 var exercise: Exercise?
                 repeat {
-                    exercise = Brachialis().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[3].[1].[0].[0]", fallback: "Brachialis"), excludeLast: false)
+                    exercise = Brachialis().getRandomExercise()
                 } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
 
                 if let uniqueExercise = exercise {
@@ -110,7 +711,7 @@ extension TwoDay {
             case "Quads":
                 var exercise: Exercise?
                 repeat {
-                    exercise = VastusQuads().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[4].[1].[0].[0]", fallback: "VastusQuads"), excludeLast: false)
+                    exercise = VastusQuads().getRandomExercise()
                 } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
 
                 if let uniqueExercise = exercise {
@@ -119,7 +720,7 @@ extension TwoDay {
             case "Hamstrings":
                 var exercise: Exercise?
                 repeat {
-                    exercise = Hamstrings().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[5].[1].[0].[0]", fallback: "Hamstrings"), excludeLast: false)
+                    exercise = Hamstrings().getRandomExercise()
                 } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
 
                 if let uniqueExercise = exercise {
@@ -129,7 +730,7 @@ extension TwoDay {
             case "Glutes":
                 var exercise: Exercise?
                 repeat {
-                    exercise = Glutes().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[6].[1].[0].[0]", fallback: "Glutes"), excludeLast: false)
+                    exercise = Glutes().getRandomExercise()
                 } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
 
                 if let uniqueExercise = exercise {
@@ -139,7 +740,7 @@ extension TwoDay {
             case "Triceps":
                 var exercise: Exercise?
                 repeat {
-                    exercise = LongHead().getRandomExercise(for: __designTimeString("#51758.[1].[11].[7].[0].[0].[7].[1].[0].[0]", fallback: "LongHead"), excludeLast: false)
+                    exercise = LongHead().getRandomExercise()
                 } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
 
                 if let uniqueExercise = exercise {
@@ -161,20 +762,20 @@ extension TwoDay {
 
 extension TwoDay {
     @_dynamicReplacement(for: initializeExercises2()) private func __preview__initializeExercises2() {
-        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 122)
+        #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 199)
         var selectedExercises: Set<Exercise> = []
         var day1Exercises = [
-            UpperChest().getRandomExercise(for: __designTimeString("#51758.[1].[10].[1].value.[0].modifier[0].arg[0].value", fallback: "UpperChest"), excludeLast: __designTimeBoolean("#51758.[1].[10].[1].value.[0].modifier[0].arg[1].value", fallback: false)),
-            UpperBack().getRandomExercise(for: __designTimeString("#51758.[1].[10].[1].value.[1].modifier[0].arg[0].value", fallback: "UpperBack"), excludeLast: __designTimeBoolean("#51758.[1].[10].[1].value.[1].modifier[0].arg[1].value", fallback: false)),
-            FrontDelts().getRandomExercise(for: __designTimeString("#51758.[1].[10].[1].value.[2].modifier[0].arg[0].value", fallback: "FrontDelts"), excludeLast: __designTimeBoolean("#51758.[1].[10].[1].value.[2].modifier[0].arg[1].value", fallback: false)),
-            Biceps().getRandomExercise(for: __designTimeString("#51758.[1].[10].[1].value.[3].modifier[0].arg[0].value", fallback: "Biceps"), excludeLast: __designTimeBoolean("#51758.[1].[10].[1].value.[3].modifier[0].arg[1].value", fallback: false))
+            UpperChest().getRandomExercise(),
+            UpperBack().getRandomExercise(),
+            FrontDelts().getRandomExercise(),
+            Biceps().getRandomExercise()
         ].compactMap { $0 }
 
         var day2Exercises = [
-            VastusQuads().getRandomExercise(for: __designTimeString("#51758.[1].[10].[2].value.[0].modifier[0].arg[0].value", fallback: "VastusQuads"), excludeLast: __designTimeBoolean("#51758.[1].[10].[2].value.[0].modifier[0].arg[1].value", fallback: false)),
-            Hamstrings().getRandomExercise(for: __designTimeString("#51758.[1].[10].[2].value.[1].modifier[0].arg[0].value", fallback: "Hamstrings"), excludeLast: __designTimeBoolean("#51758.[1].[10].[2].value.[1].modifier[0].arg[1].value", fallback: false)),
-            Glutes().getRandomExercise(for: __designTimeString("#51758.[1].[10].[2].value.[2].modifier[0].arg[0].value", fallback: "Glutes"), excludeLast: __designTimeBoolean("#51758.[1].[10].[2].value.[2].modifier[0].arg[1].value", fallback: false)),
-            LongHead().getRandomExercise(for: __designTimeString("#51758.[1].[10].[2].value.[3].modifier[0].arg[0].value", fallback: "LongHead"), excludeLast: __designTimeBoolean("#51758.[1].[10].[2].value.[3].modifier[0].arg[1].value", fallback: false))
+            VastusQuads().getRandomExercise(),
+            Hamstrings().getRandomExercise(),
+            Glutes().getRandomExercise(),
+            LongHead().getRandomExercise()
         ].compactMap { $0 }
         
         selectedExercises.formUnion(day1Exercises)
@@ -183,29 +784,29 @@ extension TwoDay {
         if let emphasis = selectedEmphasis {
             switch emphasis {
             case "Chest":
-                if let exercise = MidChest().getRandomExercise(for: "MidChest", excludeLast: false) {
+                if let exercise = MidChest().getRandomExercise() {
                     day1Exercises.append(exercise)
                 }
             case "Back":
-                if let exercise = Lats().getRandomExercise(for: "Lats", excludeLast: false) {
+                if let exercise = Lats().getRandomExercise() {
                     day1Exercises.append(exercise)
                 }
             case "Shoulders":
-                if let exercise = SideDelts().getRandomExercise(for: "Shoulders", excludeLast: false) {
+                if let exercise = SideDelts().getRandomExercise() {
                     day1Exercises.append(exercise)
                 }
             case "Biceps":
-                if let exercise = Brachialis().getRandomExercise(for: "Brachialis", excludeLast: false) {
+                if let exercise = Brachialis().getRandomExercise() {
                     day1Exercises.append(exercise)
                 }
             case "Quads":
-                if let exercise = RecQuads().getRandomExercise(for: "RecQuads", excludeLast: false) {
+                if let exercise = RecQuads().getRandomExercise() {
                     day2Exercises.append(exercise)
                 }
             case "Hamstrings":
                 var exercise: Exercise?
                 repeat {
-                    exercise = Hamstrings().getRandomExercise(for: __designTimeString("#51758.[1].[10].[5].[0].[0].[5].[1].[0].[0]", fallback: "Hamstrings"), excludeLast: false)
+                    exercise = Hamstrings().getRandomExercise()
                 } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
 
                 if let uniqueExercise = exercise {
@@ -215,7 +816,7 @@ extension TwoDay {
             case "Glutes":
                 var exercise: Exercise?
                 repeat {
-                    exercise = Glutes().getRandomExercise(for: __designTimeString("#51758.[1].[10].[5].[0].[0].[6].[1].[0].[0]", fallback: "Glutes"), excludeLast: false)
+                    exercise = Glutes().getRandomExercise()
                 } while exercise != nil && selectedExercises.contains { $0.name == exercise!.name }
 
                 if let uniqueExercise = exercise {
@@ -223,7 +824,7 @@ extension TwoDay {
                     selectedExercises.insert(uniqueExercise)
                 }
             case "Triceps":
-                if let exercise = ShortMedialHead().getRandomExercise(for: "ShortMedialHead", excludeLast: false) {
+                if let exercise = ShortMedialHead().getRandomExercise() {
                     day2Exercises.append(exercise)
                 }
             default:
@@ -291,7 +892,7 @@ extension TwoDay {
                                 }
                             }
                         }
-                        if selectedDays == "3" {
+                        if selectedDays == "Three" || selectedDays == "Four" || selectedDays == "Five" || selectedDays == "Six" {
                             Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].arg[0].value", fallback: "Day 3"))
                                 .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
                                 .bold()
@@ -311,19 +912,86 @@ extension TwoDay {
                                     }
                                 }
                             }
-
                         }
+                        if selectedDays == "Four" || selectedDays == "Five" || selectedDays == "Six"  {
+                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].arg[0].value", fallback: "Day 4"))
+                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                                .bold()
+                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[4].arg[3].value", fallback: 6))
+                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[5].arg[1].value", fallback: 40))
+
+                            VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[0].value", fallback: 12)) {
+                                ForEach(randomExercisesDay4, id: \.self) { exercise in
+                                    NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
+                                        Text(exercise.name)
+                                            .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                            .bold()
+                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                            .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                    }
+                                }
+                            }
+                        }
+                        if selectedDays == "Five" || selectedDays == "Six" {
+                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].arg[0].value", fallback: "Day 5"))
+                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                                .bold()
+                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[4].arg[3].value", fallback: 6))
+                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[5].arg[1].value", fallback: 40))
+
+                            VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[0].value", fallback: 12)) {
+                                ForEach(randomExercisesDay5, id: \.self) { exercise in
+                                    NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
+                                        Text(exercise.name)
+                                            .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                            .bold()
+                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                            .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                    }
+                                }
+                            }
+                        }
+                        if selectedDays == "Six" {
+                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].arg[0].value", fallback: "Day 6"))
+                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                                .bold()
+                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[4].arg[3].value", fallback: 6))
+                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[5].arg[1].value", fallback: 40))
+
+                            VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[0].value", fallback: 12)) {
+                                ForEach(randomExercisesDay6, id: \.self) { exercise in
+                                    NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
+                                        Text(exercise.name)
+                                            .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                            .bold()
+                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                            .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                    }
+                                }
+                            }
+                        }
+
+
                         Button(action: {
                             // Update exercises for Nutrition
                             exerciseModel.day1Exercises = randomExercisesDay1
                             exerciseModel.day2Exercises = randomExercisesDay2
-                            exerciseModel.saveToUserDefaults()
+                            exerciseModel.day3Exercises = randomExercisesDay3
+                            exerciseModel.day4Exercises = randomExercisesDay4
+                            exerciseModel.day5Exercises = randomExercisesDay5
+                            exerciseModel.day6Exercises = randomExercisesDay6
                         }) {
-                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].arg[1].value.[0].arg[0].value", fallback: "Update Nutrition"))
+                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].arg[0].value", fallback: "Update Plan"))
                                 .foregroundColor(.black)
                                 .padding()
-                                .background(RoundedRectangle(cornerRadius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].arg[1].value.[0].modifier[2].arg[0].value.arg[0].value", fallback: 10)).stroke(Color.black, lineWidth: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[1].value", fallback: 2)))
-                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].arg[1].value.[0].modifier[3].arg[1].value", fallback: 50))
+                                .background(RoundedRectangle(cornerRadius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].modifier[2].arg[0].value.arg[0].value", fallback: 10)).stroke(Color.black, lineWidth: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[1].value", fallback: 2)))
+                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].modifier[3].arg[1].value", fallback: 50))
                         }
                     }
                 }
@@ -332,14 +1000,24 @@ extension TwoDay {
             .background(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].modifier[1].arg[0].value.modifier[0].arg[0].value", fallback: 0.3)))
         }
         .onAppear {
-            if selectedDays == "2" {
-                initializeExercises2()
-            }
-            if selectedDays == "3" {
-                initializeExercises3()
+            if let selectedDays = selectedDays {
+                switch selectedDays {
+                case "Two":
+                    initializeExercises2()
+                case "Three":
+                    initializeExercises3()
+                case "Four":
+                    initializeExercises4()
+                case "Five":
+                    initializeExercises5()
+                case "Six":
+                    initializeExercises6()
+                default:
+                    break
+                }
             }
         }
-    
+
 #sourceLocation()
     }
 }

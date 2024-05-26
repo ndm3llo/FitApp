@@ -1,10 +1,10 @@
 version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
 options: "ea5b23ffc04465831186dcf4fe301299738f59c3eed08c8f2962aa6e4105e56c"
-build_start_time: [1716571337, 846588000]
-build_end_time: [1716571339, 228301000]
+build_start_time: [1716736290, 518809000]
+build_end_time: [1716736292, 825487000]
 inputs:
-  "/Users/nicolas/app/FitApp/FitApp/ContentView.swift": [1716566835, 479713640]
+  "/Users/nicolas/app/FitApp/FitApp/ContentView.swift": [1716644435, 184365385]
   "/Users/nicolas/app/FitApp/FitApp/Dropdown.swift": [1715798511, 206461479]
-  "/Users/nicolas/app/FitApp/FitApp/Excercises.swift": [1716565097, 318513275]
+  "/Users/nicolas/app/FitApp/FitApp/Excercises.swift": [1716642973, 517144977]
   "/Users/nicolas/app/FitApp/FitApp/FitAppApp.swift": [1715784738, 620024252]
-  "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift": [1716571337, 659538670]
+  "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift": [1716736290, 276867211]

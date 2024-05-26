@@ -86,55 +86,150 @@ struct Nutrition: View {
         var exerciseModel: ExerciseModel
         init(exerciseModel: ExerciseModel) {
             self.exerciseModel = exerciseModel
-            exerciseModel.loadFromUserDefaults() // Load data when Nutrition view is initialized
         }
         var body: some View {
-                VStack {
+            ZStack {
+                Color.blue.opacity(0.3)
+                    .edgesIgnoringSafeArea(.all)
+                ScrollView {
                     VStack {
-                        VStack(spacing: 70) {
-                            Text("Plan")
-                                .font(.system(size: 45))
-                                .bold()
-                                .foregroundColor(.gray)
-                                .kerning(2)
-                                .shadow(color: .gray, radius: 3, x: 3, y: 8)
-                            Text("Day 1")
+                        if exerciseModel.day1Exercises.isEmpty {
+                            VStack(spacing: 70) {
+                                Text("Plan")
+                                    .font(.system(size: 45))
+                                    .bold()
+                                    .foregroundColor(.gray)
+                                    .kerning(2)
+                                    .shadow(color: .gray, radius: 3, x: 3, y: 8)
+                                Text("No Plan Yet")
+                                    .font(.system(size: 30))
+                                    .bold()
+                                    .foregroundColor(Color.blue.opacity(0.42))
+                                    .kerning(2)
+                                    .shadow(color: .gray, radius: 6, x: 1, y: 6)
+                            }
+                        }
+                        else {
+                            VStack(spacing: 70) {
+                                Text("Plan")
+                                    .font(.system(size: 45))
+                                    .bold()
+                                    .foregroundColor(.gray)
+                                    .kerning(2)
+                                    .shadow(color: .gray, radius: 3, x: 3, y: 8)
+                                Text("Day 1")
+                                    .font(.system(size: 30))
+                                    .bold()
+                                    .foregroundColor(Color.blue.opacity(0.42))
+                                    .kerning(2)
+                                    .shadow(color: .gray, radius: 6, x: 1, y: 6)
+                            }
+                            VStack(spacing: 12) {
+                                ForEach(exerciseModel.day1Exercises, id: \.name) { exercise in
+                                    Text(exercise.name)
+                                        .font(.system(size: 20))
+                                        .bold()
+                                        .foregroundColor(Color.blue.opacity(0.38))
+                                        .kerning(2)
+                                }
+                            }
+                            Text("Day 2")
                                 .font(.system(size: 30))
                                 .bold()
                                 .foregroundColor(Color.blue.opacity(0.42))
                                 .kerning(2)
                                 .shadow(color: .gray, radius: 6, x: 1, y: 6)
-                        }
-                        VStack(spacing: 12) {
-                            ForEach(exerciseModel.day1Exercises, id: \.name) { exercise in
-                                Text(exercise.name)
-                                    .font(.system(size: 20))
-                                    .bold()
-                                    .foregroundColor(Color.blue.opacity(0.38))
-                                    .kerning(2)
+                                .padding(.top, 40)
+                            
+                            VStack(spacing: 12) {
+                                ForEach(exerciseModel.day2Exercises, id: \.name) { exercise in
+                                    Text(exercise.name)
+                                        .font(.system(size: 20))
+                                        .bold()
+                                        .foregroundColor(Color.blue.opacity(0.38))
+                                        .kerning(2)
+                                }
                             }
-                        }
-                        Text("Day 2")
-                            .font(.system(size: 30))
-                            .bold()
-                            .foregroundColor(Color.blue.opacity(0.42))
-                            .kerning(2)
-                            .shadow(color: .gray, radius: 6, x: 1, y: 6)
-                            .padding(.top, 40)
-                        
-                        VStack(spacing: 12) {
-                            ForEach(exerciseModel.day2Exercises, id: \.name) { exercise in
-                                Text(exercise.name)
-                                    .font(.system(size: 20))
+                            if !exerciseModel.day3Exercises.isEmpty {
+                                Text("Day 3")
+                                    .font(.system(size: 30))
                                     .bold()
-                                    .foregroundColor(Color.blue.opacity(0.38))
+                                    .foregroundColor(Color.blue.opacity(0.42))
                                     .kerning(2)
+                                    .shadow(color: .gray, radius: 6, x: 1, y: 6)
+                                    .padding(.top, 40)
+                                
+                                VStack(spacing: 12) {
+                                    ForEach(exerciseModel.day3Exercises, id: \.name) { exercise in
+                                        Text(exercise.name)
+                                            .font(.system(size: 20))
+                                            .bold()
+                                            .foregroundColor(Color.blue.opacity(0.38))
+                                            .kerning(2)
+                                    }
+                                }
+                            }
+                            if !exerciseModel.day4Exercises.isEmpty {
+                                Text("Day 4")
+                                    .font(.system(size: 30))
+                                    .bold()
+                                    .foregroundColor(Color.blue.opacity(0.42))
+                                    .kerning(2)
+                                    .shadow(color: .gray, radius: 6, x: 1, y: 6)
+                                    .padding(.top, 40)
+                                
+                                VStack(spacing: 12) {
+                                    ForEach(exerciseModel.day4Exercises, id: \.name) { exercise in
+                                        Text(exercise.name)
+                                            .font(.system(size: 20))
+                                            .bold()
+                                            .foregroundColor(Color.blue.opacity(0.38))
+                                            .kerning(2)
+                                    }
+                                }
+                            }
+                            if !exerciseModel.day5Exercises.isEmpty {
+                                Text("Day 5")
+                                    .font(.system(size: 30))
+                                    .bold()
+                                    .foregroundColor(Color.blue.opacity(0.42))
+                                    .kerning(2)
+                                    .shadow(color: .gray, radius: 6, x: 1, y: 6)
+                                    .padding(.top, 40)
+                                
+                                VStack(spacing: 12) {
+                                    ForEach(exerciseModel.day5Exercises, id: \.name) { exercise in
+                                        Text(exercise.name)
+                                            .font(.system(size: 20))
+                                            .bold()
+                                            .foregroundColor(Color.blue.opacity(0.38))
+                                            .kerning(2)
+                                    }
+                                }
+                            }
+                            if !exerciseModel.day6Exercises.isEmpty {
+                                Text("Day 6")
+                                    .font(.system(size: 30))
+                                    .bold()
+                                    .foregroundColor(Color.blue.opacity(0.42))
+                                    .kerning(2)
+                                    .shadow(color: .gray, radius: 6, x: 1, y: 6)
+                                    .padding(.top, 40)
+                                
+                                VStack(spacing: 12) {
+                                    ForEach(exerciseModel.day6Exercises, id: \.name) { exercise in
+                                        Text(exercise.name)
+                                            .font(.system(size: 20))
+                                            .bold()
+                                            .foregroundColor(Color.blue.opacity(0.38))
+                                            .kerning(2)
+                                    }
+                                }
                             }
                         }
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.blue.opacity(0.3))
                 }
+            }
         }
     }
 
@@ -298,20 +393,12 @@ struct Plan: View {
                 .background(Color.blue.opacity(0.3))
             }
             else {
-                if selectedDays == "Two" {
-                    VStack {
-                        TwoDay(selectedEmphasis: selectedEmphasis, selectedDays: selectedDays, exerciseModel: exerciseModel)
-                        
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.blue.opacity(0.3))
+                VStack {
+                    TwoDay(selectedEmphasis: selectedEmphasis, selectedDays: selectedDays, exerciseModel: exerciseModel)
+                    
                 }
-                else {
-                    Text("Workout")
-                        .font(.system(size: 35))
-                        .bold()
-                        .foregroundColor(Color.gray.opacity(0.9))
-                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.blue.opacity(0.3))
             }
         }
     }
@@ -321,32 +408,10 @@ struct Plan: View {
 class ExerciseModel: ObservableObject {
     @Published var day1Exercises = [Exercise]()
     @Published var day2Exercises = [Exercise]()
-    
-    init() {
-        loadFromUserDefaults()
-    }
-    
-    func saveToUserDefaults() {
-        // Convert the exercises to data
-        if let encoded = try? JSONEncoder().encode(day1Exercises) {
-            UserDefaults.standard.set(encoded, forKey: "day1Exercises")
-        }
-        if let encoded = try? JSONEncoder().encode(day2Exercises) {
-            UserDefaults.standard.set(encoded, forKey: "day2Exercises")
-        }
-    }
-    
-    func loadFromUserDefaults() {
-        // Load the exercises from UserDefaults
-        if let data = UserDefaults.standard.data(forKey: "day1Exercises"),
-           let decoded = try? JSONDecoder().decode([Exercise].self, from: data) {
-            day1Exercises = decoded
-        }
-        if let data = UserDefaults.standard.data(forKey: "day2Exercises"),
-           let decoded = try? JSONDecoder().decode([Exercise].self, from: data) {
-            day2Exercises = decoded
-        }
-    }
+    @Published var day3Exercises = [Exercise]()
+    @Published var day4Exercises = [Exercise]()
+    @Published var day5Exercises = [Exercise]()
+    @Published var day6Exercises = [Exercise]()
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

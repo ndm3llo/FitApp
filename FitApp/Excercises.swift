@@ -17,24 +17,10 @@ class MuscleGroup {
         self.exercises = exercises
     }
 
-    func getRandomExercise(for bodyPart: String, excludeLast: Bool = false) -> Exercise? {
-        guard !exercises.isEmpty else { return nil }
-        
-        // Determine the available indexes
-        let availableIndexes: [Int]
-        if excludeLast, let lastIndex = lastSelectedIndexes[bodyPart] {
-            availableIndexes = exercises.indices.filter { $0 != lastIndex }
-        } else {
-            availableIndexes = Array(exercises.indices)
+    func getRandomExercise() -> Exercise? {
+            guard !exercises.isEmpty else { return nil }
+            return exercises.randomElement()
         }
-
-        guard let randomIndex = availableIndexes.randomElement() else { return nil }
-
-        // Update the last selected index for the specific body part
-        lastSelectedIndexes[bodyPart] = randomIndex
-
-        return exercises[randomIndex]
-    }
 }
 
 class Exercise: Codable {
@@ -52,7 +38,7 @@ class Exercise: Codable {
 //Chest
 class UpperChest: MuscleGroup {
     init() {
-        super.init(name: "Chest", exercises: [
+        super.init(name: "UpperChest", exercises: [
             Exercise(name: "Incline Dumbell Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "UpperChest"),
             Exercise(name: "Incline Smith Machine Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "UpperChest"),
             Exercise(name: "Incline Machine Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "UpperChest")
@@ -61,7 +47,7 @@ class UpperChest: MuscleGroup {
 }
 class MidChest: MuscleGroup {
     init() {
-        super.init(name: "Chest", exercises: [
+        super.init(name: "MidChest", exercises: [
             Exercise(name: "Flat Dumbell Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "MidChest"),
             Exercise(name: "Flat Smith Machine Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "MidChest"),
             Exercise(name: "Flat Machine Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "MidChest"),
@@ -73,7 +59,7 @@ class MidChest: MuscleGroup {
 //Back
 class Lats: MuscleGroup {
     init() {
-        super.init(name: "Back", exercises: [
+        super.init(name: "Lats", exercises: [
             Exercise(name: "Machine Lat Pull-Down", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Lats"),
             Exercise(name: "Cable Lat Pull-Down", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Lats"),
             Exercise(name: "Assisted Pull-Up", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Lats"),
@@ -84,7 +70,7 @@ class Lats: MuscleGroup {
 }
 class UpperBack: MuscleGroup {
     init() {
-        super.init(name: "Back", exercises: [
+        super.init(name: "UpperBack", exercises: [
             Exercise(name: "Dumbell Upper Back Row", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "UpperBack"),
             Exercise(name: "Machine Upper Back Row", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "UpperBack"),
             Exercise(name: "T-Bar Row", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "UpperBack")
@@ -95,7 +81,7 @@ class UpperBack: MuscleGroup {
 //Shoulders
 class FrontDelts: MuscleGroup {
     init() {
-        super.init(name: "Front Delts", exercises: [
+        super.init(name: "FrontDelts", exercises: [
             Exercise(name: "Dumbell Shoulder Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "FrontDelts"),
             Exercise(name: "Machine Shoulder Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "FrontDelts"),
             Exercise(name: "Smith Machine Shoulder Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "FrontDelts")
@@ -104,7 +90,7 @@ class FrontDelts: MuscleGroup {
 }
 class SideDelts: MuscleGroup {
     init() {
-        super.init(name: "Side Delts", exercises: [
+        super.init(name: "SideDelts", exercises: [
             Exercise(name: "Dumbell Lateral Raise", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "SideDelts"),
             Exercise(name: "Machine Lateral Raise", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "SideDelts"),
             Exercise(name: "Cable Lateral Raise", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "SideDelts")
@@ -113,7 +99,7 @@ class SideDelts: MuscleGroup {
 }
 class RearDelts: MuscleGroup {
     init() {
-        super.init(name: "Rear Delts", exercises: [
+        super.init(name: "RearDelts", exercises: [
             Exercise(name: "Dumbell Rear Delt Fly", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "RearDelts"),
             Exercise(name: "Reverse Pec Dec", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "RearDelts"),
             Exercise(name: "Cable Rear Delt Fly", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "RearDelts")
@@ -134,7 +120,7 @@ class Biceps: MuscleGroup {
 }
 class Brachialis: MuscleGroup {
     init() {
-        super.init(name: "Biceps", exercises: [
+        super.init(name: "Brachialis", exercises: [
             Exercise(name: "Dumbell Hammer Curl", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Brachialis"),
             Exercise(name: "Cable Hammer Curl", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "Brachialis")
         ])
@@ -142,7 +128,7 @@ class Brachialis: MuscleGroup {
 }
 class ShortMedialHead: MuscleGroup {
     init() {
-        super.init(name: "Triceps", exercises: [
+        super.init(name: "ShortMedialHead", exercises: [
             Exercise(name: "Skull Crusher", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "ShortMedialHead"),
             Exercise(name: "Overhead Pushdown", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "ShortMedialHead"),
             Exercise(name: "Close-Grip Pushdown", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "ShortMedialHead")
@@ -151,7 +137,7 @@ class ShortMedialHead: MuscleGroup {
 }
 class LongHead: MuscleGroup {
     init() {
-        super.init(name: "Triceps", exercises: [
+        super.init(name: "LongHead", exercises: [
             Exercise(name: "Long Rope Pushdown", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "LongHead"),
             Exercise(name: "Single Arm Pushdown", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "LongHead"),
             Exercise(name: "Cable Pushdown", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "LongHead")
@@ -162,9 +148,9 @@ class LongHead: MuscleGroup {
 //Legs
 class VastusQuads: MuscleGroup {
     init() {
-        super.init(name: "Quads", exercises: [
+        super.init(name: "VastusQuads", exercises: [
             Exercise(name: "Smith Machine Squat", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "VastusQuads"),
-            Exercise(name: "Leg Extensions", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "VastusQuads"),
+            Exercise(name: "Quad Machine Leg Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "VastusQuads"),
             Exercise(name: "Quad Hack Squat", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "VastusQuads"),
             Exercise(name: "Quad Leg Press", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "VastusQuads")
         ])
@@ -172,7 +158,7 @@ class VastusQuads: MuscleGroup {
 }
 class RecQuads: MuscleGroup {
     init() {
-        super.init(name: "Quads", exercises: [
+        super.init(name: "RecQuads", exercises: [
             Exercise(name: "Leg Extensions", videoURL: URL(string: "file:///path/to/your/video.mp4")!, bodyPart: "RecQuads")
         ])
     }
