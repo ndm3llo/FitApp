@@ -15,7 +15,6 @@
 		372588472BF6601E00661C24 /* Excercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372588462BF6601E00661C24 /* Excercises.swift */; };
 		372588492BFC45D200661C24 /* TwoDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372588482BFC45D200661C24 /* TwoDay.swift */; };
 		37E06FB42C31A4A9000DE338 /* OpenAiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E06FB32C31A4A9000DE338 /* OpenAiService.swift */; };
-		37E06FB62C33613C000DE338 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E06FB52C33613C000DE338 /* Secrets.swift */; };
 		37E06FB82C348BEB000DE338 /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E06FB72C348BEB000DE338 /* Macro.swift */; };
 		37EAE42C2C38A1200087FA5E /* RequestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EAE42B2C38A1200087FA5E /* RequestModels.swift */; };
 /* End PBXBuildFile section */
@@ -30,7 +29,6 @@
 		372588462BF6601E00661C24 /* Excercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excercises.swift; sourceTree = "<group>"; };
 		372588482BFC45D200661C24 /* TwoDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDay.swift; sourceTree = "<group>"; };
 		37E06FB32C31A4A9000DE338 /* OpenAiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAiService.swift; sourceTree = "<group>"; };
-		37E06FB52C33613C000DE338 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		37E06FB72C348BEB000DE338 /* Macro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
 		37EAE42B2C38A1200087FA5E /* RequestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,7 +71,6 @@
 				3725883A2BF4FEFA00661C24 /* Assets.xcassets */,
 				37E06FB32C31A4A9000DE338 /* OpenAiService.swift */,
 				3725883C2BF4FEFA00661C24 /* Preview Content */,
-				37E06FB52C33613C000DE338 /* Secrets.swift */,
 				37E06FB72C348BEB000DE338 /* Macro.swift */,
 				37EAE42B2C38A1200087FA5E /* RequestModels.swift */,
 			);
@@ -161,7 +158,6 @@
 				37E06FB82C348BEB000DE338 /* Macro.swift in Sources */,
 				372588392BF4FEF800661C24 /* ContentView.swift in Sources */,
 				372588492BFC45D200661C24 /* TwoDay.swift in Sources */,
-				37E06FB62C33613C000DE338 /* Secrets.swift in Sources */,
 				37EAE42C2C38A1200087FA5E /* RequestModels.swift in Sources */,
 				37E06FB42C31A4A9000DE338 /* OpenAiService.swift in Sources */,
 				372588472BF6601E00661C24 /* Excercises.swift in Sources */,

@@ -3,54 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>logFormatVersion</key>
-	<integer>10</integer>
+	<integer>11</integer>
 	<key>logs</key>
-	<dict>
-		<key>E8584E12-A3BF-486F-A685-C3FD044B2233</key>
-		<dict>
-			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>E72CE759-608A-4D71-8E45-02178863065E</string>
-			<key>auxiliaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>className</key>
-			<string>IDESchemeActionsInvocationRecord</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
-			<key>fileName</key>
-			<string>Run-FitApp-2024.07.05_19-27-23--0400.xcresult</string>
-			<key>hasAuxiliaryLog</key>
-			<true/>
-			<key>hasConsoleLog</key>
-			<true/>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>FitApp project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>FitApp</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Run FitApp</string>
-			<key>timeStartedRecording</key>
-			<real>741914843.21088505</real>
-			<key>timeStoppedRecording</key>
-			<real>0.0</real>
-			<key>title</key>
-			<string>Run FitApp</string>
-			<key>uniqueIdentifier</key>
-			<string>E8584E12-A3BF-486F-A685-C3FD044B2233</string>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
