@@ -1,0 +1,32 @@
+{
+  "source": "/Users/nicolas/app/FitApp/FitApp/Macro.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Calories"
+      },
+      {
+        "comment": "",
+        "key": "%lld"
+      },
+      {
+        "comment": "",
+        "key": "%lld grams"
+      },
+      {
+        "comment": "",
+        "key": "Fats"
+      },
+      {
+        "comment": "",
+        "key": "Carbs"
+      },
+      {
+        "comment": "",
+        "key": "Protein"
+      }
+    ]
+  },
+  "version": 1
+}

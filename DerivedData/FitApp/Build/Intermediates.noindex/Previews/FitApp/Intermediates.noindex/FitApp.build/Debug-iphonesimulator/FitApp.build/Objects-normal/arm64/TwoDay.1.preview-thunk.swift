@@ -6,7 +6,7 @@ extension TwoDay_Previews {
     @_dynamicReplacement(for: previews) private static var __preview__previews: some View {
         #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 1002)
         @StateObject var exerciseModel = ExerciseModel()
-        TwoDay(selectedEmphasis: __designTimeString("#51758.[3].[0].property.[0].[1].arg[0].value", fallback: "Quads"), selectedDays: __designTimeString("#51758.[3].[0].property.[0].[1].arg[1].value", fallback: "Six"), exerciseModel: exerciseModel)
+        TwoDay(selectedEmphasis: __designTimeString("#10631.[3].[0].property.[0].[1].arg[0].value", fallback: "Quads"), selectedDays: __designTimeString("#10631.[3].[0].property.[0].[1].arg[1].value", fallback: "Six"), exerciseModel: exerciseModel)
     
 #sourceLocation()
     }
@@ -17,19 +17,19 @@ extension ExerciseDetail {
         #sourceLocation(file: "/Users/nicolas/app/FitApp/FitApp/TwoDay.swift", line: 981)
         VStack {
             Text(exercise.name)
-                .font(.system(size: __designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 45)))
+                .font(.system(size: __designTimeInteger("#10631.[2].[2].property.[0].[0].arg[0].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 45)))
                 .multilineTextAlignment(.center)
                 .bold()
                 .foregroundColor(.gray)
-                .kerning(__designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[0].modifier[4].arg[0].value", fallback: 2))
-                .shadow(color: .gray, radius: __designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[0].modifier[5].arg[1].value", fallback: 3), x: __designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[0].modifier[5].arg[2].value", fallback: 3), y: __designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[0].modifier[5].arg[3].value", fallback: 8))
+                .kerning(__designTimeInteger("#10631.[2].[2].property.[0].[0].arg[0].value.[0].modifier[4].arg[0].value", fallback: 2))
+                .shadow(color: .gray, radius: __designTimeInteger("#10631.[2].[2].property.[0].[0].arg[0].value.[0].modifier[5].arg[1].value", fallback: 3), x: __designTimeInteger("#10631.[2].[2].property.[0].[0].arg[0].value.[0].modifier[5].arg[2].value", fallback: 3), y: __designTimeInteger("#10631.[2].[2].property.[0].[0].arg[0].value.[0].modifier[5].arg[3].value", fallback: 8))
             Text(bodyPart)
-                .font(.system(size: __designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[1].modifier[0].arg[0].value.arg[0].value", fallback: 45)))
+                .font(.system(size: __designTimeInteger("#10631.[2].[2].property.[0].[0].arg[0].value.[1].modifier[0].arg[0].value.arg[0].value", fallback: 45)))
                 .multilineTextAlignment(.center)
                 .bold()
                 .foregroundColor(.gray)
-                .kerning(__designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[1].modifier[4].arg[0].value", fallback: 2))
-                .shadow(color: .gray, radius: __designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[1].modifier[5].arg[1].value", fallback: 3), x: __designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[1].modifier[5].arg[2].value", fallback: 3), y: __designTimeInteger("#51758.[2].[2].property.[0].[0].arg[0].value.[1].modifier[5].arg[3].value", fallback: 8))
+                .kerning(__designTimeInteger("#10631.[2].[2].property.[0].[0].arg[0].value.[1].modifier[4].arg[0].value", fallback: 2))
+                .shadow(color: .gray, radius: __designTimeInteger("#10631.[2].[2].property.[0].[0].arg[0].value.[1].modifier[5].arg[1].value", fallback: 3), x: __designTimeInteger("#10631.[2].[2].property.[0].[0].arg[0].value.[1].modifier[5].arg[2].value", fallback: 3), y: __designTimeInteger("#10631.[2].[2].property.[0].[0].arg[0].value.[1].modifier[5].arg[3].value", fallback: 8))
         }
     
 #sourceLocation()
@@ -846,132 +846,132 @@ extension TwoDay {
             ScrollView {
                 VStack{
                     VStack {
-                        VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value", fallback: 70)) {
-                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].arg[0].value", fallback: "Plan"))
-                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 45)))
+                        VStack(spacing: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value", fallback: 70)) {
+                            Text(__designTimeString("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].arg[0].value", fallback: "Plan"))
+                                .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 45)))
                                 .bold()
                                 .foregroundColor(.gray)
-                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
-                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[1].value", fallback: 3), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[2].value", fallback: 3), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[3].value", fallback: 8))
-                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[5].arg[1].value", fallback: 40))
-                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].arg[0].value", fallback: "Day 1"))
-                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                                .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[1].value", fallback: 3), x: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[2].value", fallback: 3), y: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[4].arg[3].value", fallback: 8))
+                                .padding(.top, __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[0].modifier[5].arg[1].value", fallback: 40))
+                            Text(__designTimeString("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].arg[0].value", fallback: "Day 1"))
+                                .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
                                 .bold()
-                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
-                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[3].arg[0].value", fallback: 2))
-                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[3].value", fallback: 6))
+                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                                .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[1].value.[1].modifier[4].arg[3].value", fallback: 6))
                         }
-                        VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[0].value", fallback: 12)) {
+                        VStack(spacing: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[0].value", fallback: 12)) {
                             ForEach(randomExercisesDay1, id: \.self) { exercise in
                                 NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
                                     Text(exercise.name)
-                                        .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                        .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
                                         .bold()
-                                        .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
-                                        .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                        .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                        .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
                                 }
                             }
                         }
 
-                        Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].arg[0].value", fallback: "Day 2"))
-                            .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                        Text(__designTimeString("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].arg[0].value", fallback: "Day 2"))
+                            .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
                             .bold()
-                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
-                            .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[3].arg[0].value", fallback: 2))
-                            .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[3].value", fallback: 6))
-                            .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[5].arg[1].value", fallback: 40))
+                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                            .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[3].arg[0].value", fallback: 2))
+                            .shadow(color: .gray, radius: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[4].arg[3].value", fallback: 6))
+                            .padding(.top, __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[2].modifier[5].arg[1].value", fallback: 40))
 
-                        VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[0].value", fallback: 12)) {
+                        VStack(spacing: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[0].value", fallback: 12)) {
                             ForEach(randomExercisesDay2, id: \.self) { exercise in
                                 NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
                                     Text(exercise.name)
-                                        .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                        .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
                                         .bold()
-                                        .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
-                                        .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                        .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                        .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[3].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
                                 }
                             }
                         }
                         if selectedDays == "Three" || selectedDays == "Four" || selectedDays == "Five" || selectedDays == "Six" {
-                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].arg[0].value", fallback: "Day 3"))
-                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                            Text(__designTimeString("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].arg[0].value", fallback: "Day 3"))
+                                .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
                                 .bold()
-                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
-                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[3].arg[0].value", fallback: 2))
-                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[4].arg[3].value", fallback: 6))
-                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[5].arg[1].value", fallback: 40))
+                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                                .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[4].arg[3].value", fallback: 6))
+                                .padding(.top, __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[0].modifier[5].arg[1].value", fallback: 40))
 
-                            VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[0].value", fallback: 12)) {
+                            VStack(spacing: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[0].value", fallback: 12)) {
                                 ForEach(randomExercisesDay3, id: \.self) { exercise in
                                     NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
                                         Text(exercise.name)
-                                            .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                            .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
                                             .bold()
-                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
-                                            .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                            .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[4].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
                                     }
                                 }
                             }
                         }
                         if selectedDays == "Four" || selectedDays == "Five" || selectedDays == "Six"  {
-                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].arg[0].value", fallback: "Day 4"))
-                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                            Text(__designTimeString("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].arg[0].value", fallback: "Day 4"))
+                                .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
                                 .bold()
-                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
-                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[3].arg[0].value", fallback: 2))
-                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[4].arg[3].value", fallback: 6))
-                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[5].arg[1].value", fallback: 40))
+                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                                .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[4].arg[3].value", fallback: 6))
+                                .padding(.top, __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[0].modifier[5].arg[1].value", fallback: 40))
 
-                            VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[0].value", fallback: 12)) {
+                            VStack(spacing: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[0].value", fallback: 12)) {
                                 ForEach(randomExercisesDay4, id: \.self) { exercise in
                                     NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
                                         Text(exercise.name)
-                                            .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                            .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
                                             .bold()
-                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
-                                            .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                            .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[5].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
                                     }
                                 }
                             }
                         }
                         if selectedDays == "Five" || selectedDays == "Six" {
-                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].arg[0].value", fallback: "Day 5"))
-                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                            Text(__designTimeString("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].arg[0].value", fallback: "Day 5"))
+                                .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
                                 .bold()
-                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
-                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[3].arg[0].value", fallback: 2))
-                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[4].arg[3].value", fallback: 6))
-                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[5].arg[1].value", fallback: 40))
+                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                                .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[4].arg[3].value", fallback: 6))
+                                .padding(.top, __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[0].modifier[5].arg[1].value", fallback: 40))
 
-                            VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[0].value", fallback: 12)) {
+                            VStack(spacing: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[0].value", fallback: 12)) {
                                 ForEach(randomExercisesDay5, id: \.self) { exercise in
                                     NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
                                         Text(exercise.name)
-                                            .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                            .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
                                             .bold()
-                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
-                                            .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                            .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[6].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
                                     }
                                 }
                             }
                         }
                         if selectedDays == "Six" {
-                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].arg[0].value", fallback: "Day 6"))
-                                .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
+                            Text(__designTimeString("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].arg[0].value", fallback: "Day 6"))
+                                .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[0].arg[0].value.arg[0].value", fallback: 30)))
                                 .bold()
-                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
-                                .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[3].arg[0].value", fallback: 2))
-                                .shadow(color: .gray, radius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[4].arg[3].value", fallback: 6))
-                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[5].arg[1].value", fallback: 40))
+                                .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.42)))
+                                .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[3].arg[0].value", fallback: 2))
+                                .shadow(color: .gray, radius: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[4].arg[1].value", fallback: 6), x: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[4].arg[2].value", fallback: 1), y: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[4].arg[3].value", fallback: 6))
+                                .padding(.top, __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[0].modifier[5].arg[1].value", fallback: 40))
 
-                            VStack(spacing: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[0].value", fallback: 12)) {
+                            VStack(spacing: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[0].value", fallback: 12)) {
                                 ForEach(randomExercisesDay6, id: \.self) { exercise in
                                     NavigationLink(destination: ExerciseDetail(exercise: exercise, bodyPart: exercise.bodyPart)) {
                                         Text(exercise.name)
-                                            .font(.system(size: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
+                                            .font(.system(size: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[0].arg[0].value.arg[0].value", fallback: 20)))
                                             .bold()
-                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
-                                            .kerning(__designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
+                                            .foregroundColor(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[0].value", fallback: 0.38)))
+                                            .kerning(__designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[7].[0].[1].arg[1].value.[0].arg[2].value.[0].arg[1].value.[0].modifier[3].arg[0].value", fallback: 2))
                                     }
                                 }
                             }
@@ -987,17 +987,17 @@ extension TwoDay {
                             exerciseModel.day5Exercises = randomExercisesDay5
                             exerciseModel.day6Exercises = randomExercisesDay6
                         }) {
-                            Text(__designTimeString("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].arg[0].value", fallback: "Update Plan"))
+                            Text(__designTimeString("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].arg[0].value", fallback: "Update Plan"))
                                 .foregroundColor(.black)
                                 .padding()
-                                .background(RoundedRectangle(cornerRadius: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].modifier[2].arg[0].value.arg[0].value", fallback: 10)).stroke(Color.black, lineWidth: __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[1].value", fallback: 2)))
-                                .padding(.top, __designTimeInteger("#51758.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].modifier[3].arg[1].value", fallback: 50))
+                                .background(RoundedRectangle(cornerRadius: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].modifier[2].arg[0].value.arg[0].value", fallback: 10)).stroke(Color.black, lineWidth: __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].modifier[2].arg[0].value.modifier[0].arg[1].value", fallback: 2)))
+                                .padding(.top, __designTimeInteger("#10631.[1].[9].property.[0].[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[0].arg[0].value.[8].arg[1].value.[0].modifier[3].arg[1].value", fallback: 50))
                         }
                     }
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.blue.opacity(__designTimeFloat("#51758.[1].[9].property.[0].[0].arg[0].value.[0].modifier[1].arg[0].value.modifier[0].arg[0].value", fallback: 0.3)))
+            .background(Color.blue.opacity(__designTimeFloat("#10631.[1].[9].property.[0].[0].arg[0].value.[0].modifier[1].arg[0].value.modifier[0].arg[0].value", fallback: 0.3)))
         }
         .onAppear {
             if let selectedDays = selectedDays {

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct FitAppApp: App {
     var body: some Scene {

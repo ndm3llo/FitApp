@@ -1,0 +1,32 @@
+{
+  "source": "/Users/nicolas/app/FitApp/DerivedData/FitApp/Build/Intermediates.noindex/Previews/FitApp/Intermediates.noindex/FitApp.build/Debug-iphonesimulator/FitApp.build/Objects-normal/arm64/Macro.1.preview-thunk.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%lld"
+      },
+      {
+        "comment": "",
+        "key": "Calories"
+      },
+      {
+        "comment": "",
+        "key": "%lld grams"
+      },
+      {
+        "comment": "",
+        "key": "Fats"
+      },
+      {
+        "comment": "",
+        "key": "Carbs"
+      },
+      {
+        "comment": "",
+        "key": "Protein"
+      }
+    ]
+  },
+  "version": 1
+}

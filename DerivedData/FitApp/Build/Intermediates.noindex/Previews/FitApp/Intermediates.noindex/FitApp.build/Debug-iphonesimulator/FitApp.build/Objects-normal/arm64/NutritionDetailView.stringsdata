@@ -1,0 +1,56 @@
+{
+  "source": "/Users/nicolas/app/FitApp/FitApp/NutritionDetailView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Name: %@"
+      },
+      {
+        "comment": "",
+        "key": "Calories: %.2f"
+      },
+      {
+        "comment": "",
+        "key": "Serving Size (g): %.2f"
+      },
+      {
+        "comment": "",
+        "key": "Total Fat (g): %.2f"
+      },
+      {
+        "comment": "",
+        "key": "Saturated Fat (g): %.2f"
+      },
+      {
+        "comment": "",
+        "key": "Protein (g): %.2f"
+      },
+      {
+        "comment": "",
+        "key": "Sodium (mg): %.2f"
+      },
+      {
+        "comment": "",
+        "key": "Potassium (mg): %.2f"
+      },
+      {
+        "comment": "",
+        "key": "Cholesterol (mg): %.2f"
+      },
+      {
+        "comment": "",
+        "key": "Total Carbohydrates (g): %.2f"
+      },
+      {
+        "comment": "",
+        "key": "Fiber (g): %.2f"
+      },
+      {
+        "comment": "",
+        "key": "Sugar (g): %.2f"
+      }
+    ]
+  },
+  "version": 1
+}

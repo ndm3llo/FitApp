@@ -24,17 +24,17 @@ struct FirstPage: View {
                 VStack(spacing: 30) {
                     VStack{
                         Text("Workout")
-                            .font(.system(size: 50))
+                            .font(.system(size: 55))
                             .bold()
-                            .foregroundColor(Color.gray.opacity(0.9))
+                            .foregroundColor(Color.black.opacity(0.7))
                             .kerning(2) // Adjust letter spacing
-                            .shadow(color: Color.gray.opacity(0.9), radius: 4, x: 4, y: 10) // Add a shadow effect
+                            .shadow(color: Color.black.opacity(0.4), radius: 4, x: 4, y: 10) // Add a shadow effect
                         Text("Warrior")
-                            .font(.system(size: 50))
+                            .font(.system(size: 55))
                             .bold()
-                            .foregroundColor(.gray)
+                            .foregroundColor(Color.black.opacity(0.7))
                             .kerning(2) // Adjust letter spacing
-                            .shadow(color: .gray, radius: 4, x: 4, y: 10) // Add a shadow effect
+                            .shadow(color: Color.black.opacity((0.4)), radius: 4, x: 4, y: 10) // Add a shadow effect
                     }
                     ZStack {
                         Image("letsee")
@@ -46,6 +46,16 @@ struct FirstPage: View {
                 }
                 VStack {
                     ZStack {
+                        NavigationLink(destination: CurrentPlan(exerciseModel: exerciseModel)) {
+                            Text("Current Plan")
+                                .font(.system(size: 30))
+                                .bold()
+                                .foregroundColor(Color.black.opacity(0.7))
+                                .kerning(2) // Adjust letter spacing
+                                .shadow(color: Color.black.opacity(0.4), radius: 4, x: 4, y: 0)
+                        }
+                    }
+                    ZStack {
                         NavigationLink(destination: WorkoutPlanning(exerciseModel: exerciseModel)) {
                             Image("dumbell2")
                                 .resizable()
@@ -55,7 +65,7 @@ struct FirstPage: View {
                     }
                     .padding(.leading, -160)
                     ZStack {
-                        NavigationLink(destination: Nutrition(exerciseModel: exerciseModel)) {
+                        NavigationLink(destination: NutritionView()) {
                             Image("food")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
@@ -63,7 +73,7 @@ struct FirstPage: View {
                         }
                     }
                     .padding(.leading, -158)
-                    .padding(.bottom, 100)
+                    .padding(.bottom, 50)
                     ZStack {
                         
                     }
@@ -82,7 +92,61 @@ struct UserInfo: View {
     }
 }
 
-struct Nutrition: View {
+struct NutritionView: View {
+    @State var calories = 0
+    @State var fat = 0
+    @State var carbs = 0
+    @State var protein = 0
+    @State var showTextField = false
+    @State var food = ""
+    var body: some View {
+        NavigationStack {
+            ZStack {
+                Color.blue.opacity(0.3)
+                    .edgesIgnoringSafeArea(.all)
+                VStack(spacing: 10){
+                    Text("Food Tracker")
+                        .font(.system(size: 50))
+                        .bold()
+                        .foregroundColor(Color.black.opacity(0.7))
+                        .kerning(2) // Adjust letter spacing
+                        .shadow(color: Color.black.opacity(0.4), radius: 4, x: 4, y: 0)
+                        .padding(.top, -80)
+                    MacroView(calories: $calories, fat: $fat, carbs: $carbs, protein: $protein)
+                        .alert("MacroTracker", isPresented: $showTextField, actions: {
+                            TextField("Food", text: $food)
+                            Button("Cancel", role: .cancel, action: {})
+                            Button("Done") {
+                                Task {
+                                    do {
+                                        try await OpenAiService.shared.sendPromptToChatGPT(message: food)
+                                    } catch {
+                                        print(error.localizedDescription)
+                                    }
+                                }
+                            }
+                        }, message: {
+                            Text("Please enter the meal you want to track")
+                            
+                        })
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button {
+                                    showTextField = true
+                                } label: {
+                                    Image(systemName: "plus")
+                                        .foregroundStyle(.black, .black)
+                                }
+                            }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct CurrentPlan: View {
         var exerciseModel: ExerciseModel
         init(exerciseModel: ExerciseModel) {
             self.exerciseModel = exerciseModel

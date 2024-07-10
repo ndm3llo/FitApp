@@ -56,6 +56,30 @@
       },
       {
         "comment": "",
+        "key": "Food Tracker"
+      },
+      {
+        "comment": "",
+        "key": "MacroTracker"
+      },
+      {
+        "comment": "",
+        "key": "Food"
+      },
+      {
+        "comment": "",
+        "key": "Cancel"
+      },
+      {
+        "comment": "",
+        "key": "Done"
+      },
+      {
+        "comment": "",
+        "key": "Please enter the meal you want to track"
+      },
+      {
+        "comment": "",
         "key": "Back"
       },
       {
@@ -65,6 +89,10 @@
       {
         "comment": "",
         "key": "Warrior"
+      },
+      {
+        "comment": "",
+        "key": "Current Plan"
       }
     ]
   },

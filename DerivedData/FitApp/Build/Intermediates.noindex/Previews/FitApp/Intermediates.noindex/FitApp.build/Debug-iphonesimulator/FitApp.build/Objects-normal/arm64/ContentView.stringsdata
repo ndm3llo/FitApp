@@ -12,7 +12,35 @@
       },
       {
         "comment": "",
+        "key": "Current Plan"
+      },
+      {
+        "comment": "",
         "key": "Back"
+      },
+      {
+        "comment": "",
+        "key": "Food Tracker"
+      },
+      {
+        "comment": "",
+        "key": "MacroTracker"
+      },
+      {
+        "comment": "",
+        "key": "Food"
+      },
+      {
+        "comment": "",
+        "key": "Cancel"
+      },
+      {
+        "comment": "",
+        "key": "Done"
+      },
+      {
+        "comment": "",
+        "key": "Please enter the meal you want to track"
       },
       {
         "comment": "",
@@ -29,6 +57,10 @@
       {
         "comment": "",
         "key": "Day 5"
+      },
+      {
+        "comment": "",
+        "key": "Day 6"
       },
       {
         "comment": "",
